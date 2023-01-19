@@ -1,12 +1,26 @@
-<header class="py-7">
+---
+const links = ["home", "projects", "about", "contacts"];
+---
+
+<header class="pt-10 pb-3 sticky top-0 inset-x-0 bg-bgColor">
   <nav class="flex justify-between">
     <p>Navbar</p>
 
-    <ul class="flex gap-x-4">
-      <li class="before:content-['#']"><a href="#" target="_blank" rel="noopener noreferrer">home</a></li>
-      <li class="before:content-['#']"><a href="#" target="_blank" rel="noopener noreferrer">projects</a></li>
-      <li class="before:content-['#']"><a href="#" target="_blank" rel="noopener noreferrer">about</a></li>
-      <li class="before:content-['#']"><a href="#" target="_blank" rel="noopener noreferrer">contacts</a></li>
+    <ul class="hidden md:flex gap-x-7">
+      {
+        links.map((link) => (
+          <li class="flex before:content-['#'] before:text-primary">
+            <a
+              class="transition-colors text-gray hover:text-white"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>
