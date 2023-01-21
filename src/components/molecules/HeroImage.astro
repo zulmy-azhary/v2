@@ -1,0 +1,24 @@
+---
+import logobg from "@assets/brand-logo.svg";
+import Dots from "@components/atoms/Dots.astro";
+import TextHightLight from "@components/atoms/TextHightLight.astro";
+---
+
+<div class="basis-2/5 relative z-10">
+  <div
+    class="bg-gray/10 backdrop-blur-md min-h-[27rem] flex justify-center items-center"
+  >
+    <img class="select-none absolute -z-10 -left-14 w-44 h-auto" src={logobg} alt="Logo Background" />
+    <p class="w-4/5 block text-center">Picture</p>
+    <div class="absolute bottom-10 -right-7 z-10">
+      <Dots size={25} />
+    </div>
+  </div>
+  <div class="-translate-y-5 -translate-x-6">
+    <p class="text-base font-normal py-2 px-5 border-[1px] border-gray bg-bgColor relative z-10 before:content-['#'] before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent">
+      Currently learning <TextHightLight class="from-springGreen to-pigmentBlue">Vue</TextHightLight> and
+      <TextHightLight class="from-red-300 to-red-500">Svelte</TextHightLight>
+    </p>
+    <p class="text-sm font-normal py-1 px-3 text-gray bg-bgColor w-fit ml-auto">Makassar, Indonesia</p>
+  </div>
+</div>

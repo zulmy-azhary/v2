@@ -1,11 +1,11 @@
 ---
 import NavList from "@components/molecules/NavList.astro";
-import Logo from "@components/atoms/Logo.astro";
+import BrandLogo from "@components/molecules/BrandLogo.astro";
 ---
 
-<header class="pt-10 pb-3 sticky top-0 inset-x-0 bg-bgColor">
-  <nav class="flex justify-between">
-    <Logo />
+<header class="pt-10 pb-3 fixed top-0 inset-x-0 z-50 bg-bgColor">
+  <nav class="flex justify-between items-center max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+    <BrandLogo />
     <NavList />
   </nav>
 </header>

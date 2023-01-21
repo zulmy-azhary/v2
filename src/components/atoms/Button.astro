@@ -8,8 +8,8 @@ const { variant } = Astro.props;
 
 <button
   class:list={[
-    "border-[1px] py-2 px-5 bg-opacity-0 hover:bg-opacity-20 transition-colors",
-    variant === "primary" ? "border-primary bg-primary" : "border-gray bg-gray",
+    "w-fit border-[1px] py-2 px-5 bg-opacity-0 hover:bg-opacity-20 transition-colors",
+    variant === "primary" ? "border-primary bg-primary" : "border-gray bg-gray text-gray",
   ]}>
   <slot />
 </button>

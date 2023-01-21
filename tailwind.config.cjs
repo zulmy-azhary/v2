@@ -11,7 +11,9 @@ module.exports = {
         bgColor: "#282C33",
         primary: "#C778DD",
         gray: "#ABB2BF",
-        accent: "#4338D9"
+        accent: "#4338D9",
+        springGreen: "#2AF598",
+        pigmentBlue: "#3437AA",
       },
     },
   },
