@@ -1,0 +1,11 @@
+export { default as Button } from "./Button";
+export { default as Logo } from "./Logo";
+export { default as Link } from "./Link";
+export { default as TextHighlight } from "./TextHighlight";
+export { default as Dots } from "./Dots";
+export { default as CustomImage } from "./CustomImage";
+export { default as QuoteText } from "./QuoteText";
+export { default as QuoteAuthor } from "./QuoteAuthor";
+export { default as Heading } from "./Heading";
+export { default as Text } from "./Text";
+export { default as Icon } from "./Icon";
