@@ -3,14 +3,14 @@ import Button from "@components/atoms/Button.astro";
 import TextHightLight from "@components/atoms/TextHightLight.astro";
 ---
 
-<div class="basis-3/5 flex flex-col gap-y-10">
-  <h1 class="text-4xl leading-10 font-medium tracking-tight">
-      I'am Zoel a <TextHightLight>web designer</TextHightLight> and <TextHightLight>front end developer
+<div class="lg:basis-3/5 flex flex-col gap-y-5 md:gap-y-10 items-center md:items-start">
+  <h1 class="text-2xl md:text-4xl leading-7 md:leading-10 font-medium tracking-tight">
+      I am Zoel, a <TextHightLight>web designer</TextHightLight> and <TextHightLight>front end developer
     </TextHightLight>
   </h1>
-  <h5 class="text-gray w-11/12 tracking-wide">
+  <h5 class="text-gray w-full md:w-11/12 tracking-wide text-sm md:text-base text-justify md:text-start">
     Design, building, and maintaining interactive and responsive websites especially for modern
     websites.
   </h5>
-  <Button variant="primary">Download CV</Button>
+  <Button variant="primary" class="self-end md:self-auto">Download CV</Button>
 </div>

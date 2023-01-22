@@ -1,24 +1,24 @@
 ---
-import logobg from "@assets/brand-logo.svg";
 import Dots from "@components/atoms/Dots.astro";
+import Image from "@components/atoms/Image.astro";
 import TextHightLight from "@components/atoms/TextHightLight.astro";
 ---
 
-<div class="basis-2/5 relative z-10">
+<div class="lg:basis-2/5 md:min-h-[27rem] md:w-4/6 lg:w-fit">
   <div
-    class="bg-gray/10 backdrop-blur-md min-h-[27rem] flex justify-center items-center"
+    class="bg-gray/10 backdrop-blur-md h-72 md:h-[25rem] flex justify-center items-center relative"
   >
-    <img class="select-none absolute -z-10 -left-14 w-44 h-auto" src={logobg} alt="Logo Background" />
-    <p class="w-4/5 block text-center">Picture</p>
-    <div class="absolute bottom-10 -right-7 z-10">
-      <Dots size={25} />
+    <Image class="absolute -z-10 -left-5 md:-left-10 -top-6 md:top-6 w-36 md:w-48 h-auto" src={"/assets/brand-logo.svg"} alt="Logo Background" />
+    <Image class="w-full self-end" src={"/assets/profile-pic.png"} alt="Profile Image" />
+    <div class="absolute bottom-12 -right-4 md:-right-7 z-10">
+      <Dots size={25} class="gap-3 md:gap-4" />
     </div>
   </div>
-  <div class="-translate-y-5 -translate-x-6">
-    <p class="text-base font-normal py-2 px-5 border-[1px] border-gray bg-bgColor relative z-10 before:content-['#'] before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent">
+  <div class="-translate-y-5 translate-x-12 md:translate-x-0 xl:-translate-x-6 w-fit md:w-full">
+    <p class="text-xs md:text-base font-normal py-2 px-3 md:px-5 border-[1px] border-gray bg-bgColor relative z-10 before:content-['#'] before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent">
       Currently learning <TextHightLight class="from-springGreen to-pigmentBlue">Vue</TextHightLight> and
       <TextHightLight class="from-red-300 to-red-500">Svelte</TextHightLight>
     </p>
-    <p class="text-sm font-normal py-1 px-3 text-gray bg-bgColor w-fit ml-auto">Makassar, Indonesia</p>
+    <p class="text-xs md:text-sm font-normal py-1 text-gray bg-bgColor w-fit ml-auto">Makassar, Indonesia</p>
   </div>
 </div>

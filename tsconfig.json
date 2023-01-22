@@ -2,7 +2,6 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "types": ["astro/client"],
-    "importsNotUsedAsValues": "preserve",
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],

@@ -16,12 +16,12 @@ module.exports = {
         pigmentBlue: "#3437AA",
       },
     },
-  },
-  screens: {
-    sm: "375px",
-    md: "768px",
-    lg: "1024px",
-    xl: "1440px",
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
+    },
   },
   plugins: [],
 };
