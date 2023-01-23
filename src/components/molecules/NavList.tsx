@@ -6,7 +6,7 @@ const NavList: React.FC = () => {
   return (
     <ul className="hidden md:flex gap-x-7">
       {links.map((link, i) => (
-        <CustomLink key={i} to="#about">
+        <CustomLink key={i} to={`#${link}`}>
           {link}
         </CustomLink>
       ))}

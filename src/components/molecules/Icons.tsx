@@ -30,9 +30,9 @@ const items: Item[] = [
 const Icons: React.FC = () => {
   return (
     <>
-      {items.map((item, i) => (
-        <a key={i} href={item.url} target="_blank" rel="noreferrer">
-          <Icon name={item.iconName} />
+      {items.map(({ iconName, url }, i) => (
+        <a key={i} href={url} target="_blank" rel="noreferrer" aria-label="Visit my social media">
+          <Icon iconName={iconName} />
         </a>
       ))}
     </>

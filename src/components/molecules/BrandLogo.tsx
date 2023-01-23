@@ -4,7 +4,7 @@ import { Logo } from "@/components/atoms";
 
 const BrandLogo: React.FC = () => {
   return (
-    <Link href={"/"}>
+    <Link href={"/"} aria-label="Back to home page">
       <Logo className="hover:stroke-accent" />
     </Link>
   );
