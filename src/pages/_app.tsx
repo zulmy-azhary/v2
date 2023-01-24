@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div style={firaCode.style} className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
-        <Component style={firaCode.style} {...pageProps} />
+        <Component {...pageProps} />
       </div>
     </>
   );

@@ -7,7 +7,7 @@ const HeroContent: React.FC = () => {
       <h1 className="text-2xl lg:text-3xl xl:text-4xl leading-7 md:leading-10 font-medium tracking-tight md:text-center lg:text-start">
         I am Zoel, a <TextHighlight>web designer</TextHighlight> and <TextHighlight>front end developer</TextHighlight>
       </h1>
-      <p className="text-gray w-full xl:w-11/12 tracking-wide text-sm md:text-base text-justify md:text-center lg:text-start">
+      <p className="text-gray w-full xl:w-11/12 tracking-wide text-sm md:text-base lg:text-lg text-justify md:text-center lg:text-start">
         Design, building, and maintaining interactive and responsive websites especially for modern websites.
       </p>
       <Button variant="primary" className="self-end md:self-center lg:self-auto">Download CV</Button>

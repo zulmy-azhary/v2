@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar } from "@/components/organisms";
 import clsx from "clsx";
 
@@ -15,12 +15,24 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = ({
   className,
   ...rest
 }) => {
-  const generateTitle = `Zulmy Azhary AS | ${title}`;
+  const defaultTitle = `Zulmy Azhary AS | ${title}`;
+  
+  useEffect(() => {
+    const steps = ["/", "-", "\\", "|"];
+    let step = 0;
+    const handleTitle = () => {
+      if (step >= 4) step = 0;
+      document.title = `Zulmy Azhary AS ${steps[step++]} ${title}`;
+    };
+
+    const interval = setInterval(handleTitle, 500);
+    return () => clearInterval(interval);
+  });
 
   return (
     <>
       <Head>
-        <title>{generateTitle}</title>
+        <title>{defaultTitle}</title>
         {metaDescription && <meta name="description" content={metaDescription} />}
       </Head>
       <Navbar />

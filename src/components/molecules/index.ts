@@ -10,3 +10,4 @@ export { default as Section } from "./Section";
 export { default as AboutContent } from "./AboutContent";
 export { default as AboutImage } from "./AboutImage";
 export { default as Icons } from "./Icons";
+export { default as SkillCard } from "./SkillCard";
