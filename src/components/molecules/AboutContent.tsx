@@ -15,7 +15,7 @@ const AboutContent: React.FC = () => {
           {content}
         </Text>
       ))}
-      <Dots size={16} className="grid-cols-4 gap-3 md:gap-4 absolute rotate-12 -z-10 top-12 md:-top-12 lg:-top-6 xl:-top-24 right-2 md:right-20 lg:-right-24 xl:right-0" />
+      <Dots size={16} className="grid-cols-4 gap-2 md:gap-4 absolute rotate-12 -z-10 top-12 md:-top-12 lg:-top-20 xl:-top-24 right-3 md:right-20 lg:right-0" />
       <Dots size={20} className="grid-cols-5 gap-x-5 gap-y-3 absolute -z-20 -rotate-12 -bottom-20 lg:-bottom-24 xl:-bottom-32 -left-2 md:left-20 lg:-left-12 xl:-left-24" />
     </div>
   );

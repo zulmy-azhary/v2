@@ -6,12 +6,14 @@ import clsx from "clsx";
 interface Props extends React.HTMLAttributes<HTMLElement> {
   title: string;
   metaDescription?: string;
+  padding?: string;
 }
 
 const Layout: React.FC<React.PropsWithChildren<Props>> = ({
-  children,
   title = "Loading...",
   metaDescription,
+  padding,
+  children,
   className,
   ...rest
 }) => {
@@ -36,7 +38,7 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = ({
         {metaDescription && <meta name="description" content={metaDescription} />}
       </Head>
       <Navbar />
-      <main className={clsx("pt-36 md:pt-44 xl:pt-48", className)} {...rest}>
+      <main className={clsx("max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto", className ?? "min-h-screen", padding ?? "pt-36 md:pt-44 xl:pt-48")} {...rest}>
         {children}
       </main>
     </>

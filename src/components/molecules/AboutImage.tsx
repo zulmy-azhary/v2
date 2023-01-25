@@ -43,8 +43,8 @@ const shuffle = (array: string[]) => {
 
 const AboutImage: React.FC = () => {
   const isTablet = useMediaQuery("(min-width: 768px)");
-  const tablet = isTablet ? 270 : 220;
-  const size = isTablet ? 50 : 40;
+  const tablet = isTablet ? 270 : 175;
+  const size = isTablet ? 50 : 32;
 
   shuffle(items);
 

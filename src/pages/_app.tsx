@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <div style={firaCode.style} className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+      <div style={firaCode.style} className="overflow-hidden">
         <Component {...pageProps} />
       </div>
     </>
