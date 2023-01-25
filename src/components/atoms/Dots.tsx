@@ -8,7 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 const Dots: React.FC<Props> = ({ size, color, className, ...rest }) => {
   return (
-    <div className={clsx("grid grid-cols-5", className)} {...rest}>
+    <div className={clsx("grid grid-cols-5 place-items-center", className)} {...rest}>
       {Array.from(new Array(size)).map((_, idx) => (
         <span
           key={idx}
