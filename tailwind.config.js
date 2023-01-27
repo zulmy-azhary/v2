@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        firaCode: ["Fira Code"],
+        firaCode: "var(--firaCode)",
       },
       colors: {
         bgColor: "#282C33",

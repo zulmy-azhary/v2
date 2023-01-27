@@ -73,10 +73,10 @@ export const TagSphere: React.FC<Props> = (props) => {
         if (!keepRollingAfterMouseOut && !active && !firstRender) {
           setLessSpeed((lessSpeedCurrent) => {
             const lessConstant = lessSpeed * (maxSpeed / 200);
-  
+
             return lessSpeedCurrent - lessConstant > 0.01 ? lessSpeedCurrent - lessConstant : 0;
           });
-  
+
           a = -(Math.min(Math.max(-mouseY, -size), size) / radius) * lessSpeed;
           b = (Math.min(Math.max(-mouseX, -size), size) / radius) * lessSpeed;
         } else if (!active && !firstRender && keepRollingAfterMouseOut) {
@@ -87,7 +87,7 @@ export const TagSphere: React.FC<Props> = (props) => {
           b = (Math.min(Math.max(-mouseX, -size), size) / radius) * maxSpeed;
         }
         if (Math.abs(a) <= 0.01 && Math.abs(b) <= 0.01) return items; // pause
-  
+
         // calculate offset
         const l = Math.PI / 180;
         const sc = [Math.sin(a * l), Math.cos(a * l), Math.sin(b * l), Math.cos(b * l)];
@@ -154,6 +154,9 @@ export const TagSphere: React.FC<Props> = (props) => {
           setActive(false);
         }
       }}
+      onTouchEnd={() => {
+        init();
+      }}
       style={
         useContainerInlineStyles
           ? style || defaultStyles.getContainer(radius, fullWidth, fullHeight)
@@ -163,7 +166,6 @@ export const TagSphere: React.FC<Props> = (props) => {
       {items.map((item) => item.el)}
     </div>
   );
-}
-
+};
 
 export default TagSphere;

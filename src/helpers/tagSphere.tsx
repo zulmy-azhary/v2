@@ -1,5 +1,6 @@
 import { TagSphereProps } from "@/types/tagCloud";
 import { CSSProperties, ReactNode } from "react";
+import { allSkills } from "./skills";
 
 export const defaultStyles = {
   getContainer: (radius: number, fullWidth: boolean, fullHeight: boolean) =>
@@ -107,26 +108,7 @@ export const createItem = (
 };
 
 export const defaultState: TagSphereProps = {
-  texts: [
-    "TypeScript",
-    "JavaScript",
-    "ReactJs",
-    "NextJs",
-    "TailwindCSS",
-    "Styled Components",
-    "Chakra UI",
-    "Material UI",
-    "VueJs",
-    "Svelte",
-    "Framer Motion",
-    "Firebase",
-    "Figma",
-    "VsCode",
-    "Vite",
-    "Bootstrap",
-    "MariaDB",
-    "Sass",
-  ],
+  texts: allSkills,
   maxSpeed: 7,
   initialSpeed: 7,
   initialDirection: 135,

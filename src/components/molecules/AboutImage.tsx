@@ -2,31 +2,11 @@ import React from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { TagSphere } from "@/components/atoms";
 import Image from "next/image";
-
-const items = [
-  "TypeScript",
-  "JavaScript",
-  "ReactJs",
-  "NextJs",
-  "TailwindCSS",
-  "Styled Components",
-  "Chakra UI",
-  "Material UI",
-  "VueJs",
-  "Svelte",
-  "Framer Motion",
-  "Firebase",
-  "Figma",
-  "VsCode",
-  "Vite",
-  "Bootstrap",
-  "MariaDB",
-  "Sass",
-];
+import { allSkills as skills } from "@/helpers/skills";
 
 const shuffle = (array: string[]) => {
-  let currentIndex = array.length,
-    randomIndex: number;
+  let currentIndex = array.length;
+  let randomIndex: number;
 
   // While there remain elements to shuffle.
   while (currentIndex != 0) {
@@ -39,30 +19,30 @@ const shuffle = (array: string[]) => {
   }
 
   return array;
-}
+};
 
 const AboutImage: React.FC = () => {
   const isTablet = useMediaQuery("(min-width: 768px)");
-  const tablet = isTablet ? 270 : 175;
-  const size = isTablet ? 50 : 32;
+  const radiusSize = isTablet ? 270 : 175;
+  const imageSize = isTablet ? 50 : 32;
 
-  shuffle(items);
+  shuffle(skills);
 
-  const texts = items.map((item, i) => {
-    const textFiltered = item.split(" ").length > 1 ? item.split(" ").join("-") : item;
+  const skillItems = skills.map((skill, i) => {
+    const textFiltered = skill.split(" ").length > 1 ? skill.split(" ").join("-") : skill;
     return (
       <Image
         key={i}
         className="select-none"
         src={`/assets/icons/${textFiltered.toLowerCase()}.svg`}
-        width={size}
-        height={size}
+        width={imageSize}
+        height={imageSize}
         alt="Icon Image"
       />
     );
   });
 
-  return <TagSphere radius={tablet} className="z-0 md:basis-1/2" texts={texts} />;
+  return <TagSphere radius={radiusSize} className="z-0 md:basis-1/2" texts={skillItems} />;
 };
 
 export default AboutImage;

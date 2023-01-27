@@ -9,9 +9,9 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 const Button: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { children, variant, className, href, ...rest } = props;
 
-  const primaryVariant = "border-[1px] border-primary bg-primary";
-  const secondaryVariant = "border-[1px] border-gray bg-gray text-gray";
-  const btnVariant = variant === "primary" && primaryVariant || variant === "secondary" && secondaryVariant;
+  const primaryVariant = variant === "primary" && "border-[1px] border-primary bg-primary";
+  const secondaryVariant = variant === "secondary" && "border-[1px] border-gray bg-gray text-gray";
+  const btnVariant = primaryVariant || secondaryVariant;
   
   return (
     <Link

@@ -13,8 +13,7 @@ const Navbar: React.FC = () => {
       <nav className="flex justify-between items-center max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
         <BrandLogo />
         <aside>
-          {isTablet && isHomePage && <NavList />}
-          {!isTablet && <Hamburger />}
+          {isTablet ? isHomePage && <NavList /> : <Hamburger />}
         </aside>
       </nav>
     </header>

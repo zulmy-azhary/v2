@@ -6,7 +6,9 @@ interface Props extends React.SVGAttributes<HTMLOrSVGElement> {
   height?: string;
 }
 
-const Logo: React.FC<Props> = ({ className, width, height, ...rest }) => {
+const Logo: React.FC<Props> = (props) => {
+  const { className, width, height, ...rest } = props;
+  
   return (
     <svg
       width={width || "42"}

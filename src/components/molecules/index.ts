@@ -12,4 +12,5 @@ export { default as AboutImage } from "./AboutImage";
 export { default as Icons } from "./Icons";
 export { default as SkillCard } from "./SkillCard";
 export { default as SkillObjects } from "./SkillObjects";
+export { default as ProjectCard } from "./ProjectCard";
 export { default as Hamburger } from "./Hamburger";

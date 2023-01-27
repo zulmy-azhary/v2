@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, TextHighlight } from "@/components/atoms";
+import { ButtonLink, TextHighlight } from "@/components/atoms";
 
 const HeroContent: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const HeroContent: React.FC = () => {
       <p className="text-gray w-full xl:w-11/12 tracking-wide text-sm md:text-base lg:text-lg text-justify md:text-center lg:text-start">
         Design, building, and maintaining interactive and responsive websites especially for modern websites.
       </p>
-      <Button variant="primary" className="self-end md:self-center lg:self-auto">Download CV</Button>
+      <ButtonLink variant="primary" href="#" className="self-end md:self-center lg:self-auto">Download CV</ButtonLink>
     </div>
   )
 }

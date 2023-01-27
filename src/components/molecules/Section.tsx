@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Heading } from "@/components/atoms";
+import { ButtonLink, Heading } from "@/components/atoms";
 import clsx from "clsx";
 
 type SectionType = "about" | "projects" | "skills" | "contacts";
@@ -17,7 +17,7 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
       <div className="flex justify-between flex-row">
         <Heading className={headingClassName}>{section}</Heading>
         {section === "projects" && (
-          <Button className="self-end md:self-auto hover:text-primary border-l-[1px] border-primary" href="/projects">View all {"~~>"}</Button>
+          <ButtonLink className="self-end md:self-auto hover:text-primary border-l-[1px] border-primary" href="/projects">View all {"~~>"}</ButtonLink>
         )}
       </div>
       {children}
