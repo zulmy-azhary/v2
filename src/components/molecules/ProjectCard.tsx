@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, ButtonLink, Text } from "@/components/atoms";
 import Image from "next/image";
-import clsx from 'clsx';
+import clsx from "clsx";
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   title: string;
@@ -17,9 +17,9 @@ const ProjectCard: React.FC<Props> = (props) => {
   return (
     <Box className="md:col-span-3 xl:col-span-4 w-full h-fit">
       {src && (
-        <Box>
+        <Box className="overflow-hidden">
           <Image
-            className="w-auto select-none aspect-video object-cover"
+            className="w-auto select-none aspect-video object-cover hover:scale-125 transition-transform duration-300 cursor-pointer"
             src={src}
             width={512}
             height={512}
