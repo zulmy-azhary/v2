@@ -13,4 +13,7 @@ export { default as Icons } from "./Icons";
 export { default as SkillCard } from "./SkillCard";
 export { default as SkillObjects } from "./SkillObjects";
 export { default as ProjectCard } from "./ProjectCard";
+export { default as FooterContent } from "./FooterContent";
+export { default as FooterMedia } from "./FooterMedia";
+export { default as FooterCopyright } from "./FooterCopyright";
 export { default as Hamburger } from "./Hamburger";

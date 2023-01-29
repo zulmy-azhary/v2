@@ -4,7 +4,7 @@ import { NextPage } from "next";
 const Projects: NextPage = () => {
   return (
     <Layout title="All Projects" metaDescription="This is v2 of my portfolio" className="min-h-[1000px]">
-      Projects Page
+      Coming soon...
     </Layout>
   );
 };

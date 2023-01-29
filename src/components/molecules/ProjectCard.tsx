@@ -2,14 +2,9 @@ import React from "react";
 import { Box, ButtonLink, Text } from "@/components/atoms";
 import Image from "next/image";
 import clsx from "clsx";
+import type { Project } from "@/types";
 
-interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
-  title: string;
-  description?: string;
-  techList: string[];
-  liveUrl?: string;
-  repoUrl: string;
-}
+type Props = Project;
 
 const ProjectCard: React.FC<Props> = (props) => {
   const { src, title, description, techList, liveUrl, repoUrl } = props;
@@ -19,7 +14,7 @@ const ProjectCard: React.FC<Props> = (props) => {
       {src && (
         <Box className="overflow-hidden">
           <Image
-            className="w-auto select-none aspect-video object-cover hover:scale-125 transition-transform duration-300 cursor-pointer"
+            className="w-auto select-none aspect-video object-cover hover:scale-[1.125] transition-transform duration-500 cursor-pointer"
             src={src}
             width={512}
             height={512}

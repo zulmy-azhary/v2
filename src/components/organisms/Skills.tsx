@@ -10,7 +10,7 @@ import {
 
 const Skills: React.FC = () => {
   return (
-    <Section section={"skills"} headingClassName="basis-5/12" className="lg:pt-16">
+    <Section section={"skills"} headingClassName="basis-5/12">
       <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6">
         <SkillObjects />
         <div className="basis-3/5 lg:basis-4/6 xl:basis-3/5 grid grid-flow-row lg:grid-flow-col grid-cols-2 md:grid-cols-7 lg:grid-cols-1 lg:grid-rows-2 gap-5 lg:place-items-end">
