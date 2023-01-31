@@ -3,12 +3,15 @@
 
 echo "Styling, testing and building your project before committing"
 
+echo "Trying to check Prettier now...";
 # Check Prettier
 npm run check-format ||
 {
   echo "Prettier check failed ❌. Run \"npm run format\" and try to commit again";
   false;
 }
+
+echo "Prettier checks are passed ✅. Trying to check ESLint now...";
 
 # Check ESLint
 npm run lint ||
@@ -17,20 +20,22 @@ npm run lint ||
   false;
 }
 
-# Check tsconfig
+echo "ESLint checks are passed ✅. Trying to check types now...";
+
+# Check all types for typescript
 npm run check-types ||
 {
   echo "Failed check types ❌. Try to refactor your code and try to commit again";
   false;
 }
 
-echo "Alright! All checks passed ✅. Trying to build now..."
+echo "Alright! All checks are passed ✅. Trying to build now...";
 
 # Build the project
 npm run build ||
 {
-  echo "Your build failed, fix the errors above and try to commit again";
+  echo "Your build failed ❌, fix the errors above and try to commit again";
   false;
 }
 
-echo "Commit successed!! ✅✅✅"
+echo "Commit successed!! ✅✅✅✅"
