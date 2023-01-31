@@ -13,11 +13,20 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { children, section, className, headingClassName, ...rest } = props;
 
   return (
-    <section id={section} className={clsx("min-h-[24rem] pt-32 flex flex-col gap-y-10 md:gap-y-16", className)} {...rest}>
-      <div className="flex justify-between flex-row">
+    <section
+      id={section}
+      className={clsx("flex min-h-[24rem] flex-col gap-y-10 pt-32 md:gap-y-16", className)}
+      {...rest}
+    >
+      <div className="flex flex-row justify-between">
         <Heading className={headingClassName}>{section}</Heading>
         {section === "projects" && (
-          <ButtonLink className="self-end md:self-auto hover:text-primary border-l-[1px] border-primary" href="/projects">View all {"~~>"}</ButtonLink>
+          <ButtonLink
+            className="self-end border-l-[1px] border-primary hover:text-primary md:self-auto"
+            href="/projects"
+          >
+            View all {"~~>"}
+          </ButtonLink>
         )}
       </div>
       {children}

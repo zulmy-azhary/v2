@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from 'clsx';
+import clsx from "clsx";
 
 interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
   itemList?: boolean;
@@ -7,9 +7,16 @@ interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const Text: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { itemList, children, className, ...rest } = props;
-  
+
   return (
-    <p className={clsx(className, itemList && "before:content-['#'] before:mr-1 before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent")} {...rest}>
+    <p
+      className={clsx(
+        className,
+        itemList &&
+          "before:mr-1 before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
+      )}
+      {...rest}
+    >
       {children}
     </p>
   );

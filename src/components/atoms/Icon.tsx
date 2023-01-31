@@ -8,10 +8,10 @@ interface Props extends React.SVGAttributes<HTMLOrSVGElement> {
 
 const Icon: React.FC<Props> = (props) => {
   const { iconName: IconName, className, ...rest } = props;
-  
+
   return (
     <IconName
-      className={clsx("text-gray cursor-pointer transition-colors w-7 h-7 hover:text-primary", className)}
+      className={clsx("h-7 w-7 cursor-pointer text-gray transition-colors hover:text-primary", className)}
       {...rest}
     />
   );

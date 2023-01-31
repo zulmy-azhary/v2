@@ -3,16 +3,19 @@ import { Box, Text, TextHighlight } from "@/components/atoms";
 
 const HeroStatus: React.FC = () => {
   return (
-    <div className="-translate-y-5 translate-x-3 ml-auto md:ml-0 md:translate-x-0 xl:-translate-x-6 w-fit md:w-full">
-      <Box>
-        <Text itemList className="text-xs md:text-base lg:text-sm xl:text-base font-normal py-2 px-3 md:px-5 lg:px-3 xl:px-5 bg-bgColor relative z-10 flex gap-x-2 md:gap-x-3 lg:gap-x-2 xl:gap-x-3">
+    <div className="ml-auto w-fit -translate-y-5 translate-x-3 md:ml-0 md:w-full md:translate-x-0 xl:-translate-x-6">
+      <Box className="bg-bgColor py-2 px-3 md:px-5 lg:px-3 xl:px-5">
+        <Text
+          itemList
+          className="relative z-10 flex gap-x-2 text-xs font-normal md:gap-x-3 md:text-base lg:gap-x-2 lg:text-sm xl:gap-x-3 xl:text-base"
+        >
           Currently learning
           <TextHighlight className="from-springGreen to-pigmentBlue">Vue</TextHighlight>
           and
           <TextHighlight className="from-red-300 to-red-500">Svelte</TextHighlight>
         </Text>
       </Box>
-      <Text className="text-xs md:text-sm font-normal py-1 text-gray bg-bgColor w-fit ml-auto">
+      <Text className="ml-auto w-fit bg-bgColor py-1 text-xs font-normal text-gray md:text-sm">
         Makassar, Indonesia
       </Text>
     </div>

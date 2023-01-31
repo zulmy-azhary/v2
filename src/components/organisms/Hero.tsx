@@ -3,7 +3,7 @@ import { HeroContent, HeroImage, HeroPicture, HeroStatus } from "@/components/mo
 
 const Hero: React.FC = () => {
   return (
-    <section className="flex items-center flex-col-reverse gap-y-6 lg:flex-row">
+    <section className="flex flex-col-reverse items-center gap-y-6 lg:flex-row">
       <HeroContent />
       <HeroImage>
         <HeroPicture />

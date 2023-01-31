@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": [2, "double", { "avoidEscape": true }]
+  },
+  "ignorePatterns": ["**/node_modules/*", "**/public/*", "**/*.config.js", "**/*.d.ts", "**/*.json"]
 }

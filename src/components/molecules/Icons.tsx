@@ -11,20 +11,20 @@ type Item = {
 const items: Item[] = [
   {
     iconName: AiFillGithub,
-    url: "https://github.com/zulmy-azhary",
+    url: "https://github.com/zulmy-azhary"
   },
   {
     iconName: AiFillFacebook,
-    url: "https://www.facebook.com/zulmyazhary",
+    url: "https://www.facebook.com/zulmyazhary"
   },
   {
     iconName: AiOutlineInstagram,
-    url: "https://www.instagram.com/zulmyazhary_",
+    url: "https://www.instagram.com/zulmyazhary_"
   },
   {
     iconName: AiFillLinkedin,
-    url: "https://www.linkedin.com/in/zulmy-azhary-7a0b04159",
-  },
+    url: "https://www.linkedin.com/in/zulmy-azhary-7a0b04159"
+  }
 ];
 
 const Icons: React.FC = () => {

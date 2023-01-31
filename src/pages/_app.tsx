@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import clsx from "clsx";
 import { firaCode } from "@/styles/fonts";
+import { ScrollProvider, ToggleProvider } from "@/context";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +13,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className={clsx(firaCode.variable, "overflow-hidden font-firaCode")}>
-        <Component {...pageProps} />
+        <ToggleProvider>
+          <ScrollProvider>
+            <Component {...pageProps} />
+          </ScrollProvider>
+        </ToggleProvider>
       </div>
     </>
   );

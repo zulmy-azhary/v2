@@ -1,13 +1,20 @@
+import clsx from "clsx";
 import React from "react";
 
-interface Props {
+interface Props extends React.LiHTMLAttributes<HTMLLIElement> {
   to?: string;
 }
 
-const Link: React.FC<React.PropsWithChildren<Props>> = ({ children, to }) => {
+const Link: React.FC<React.PropsWithChildren<Props>> = ({ children, to, className, ...rest }) => {
   return (
-    <li className="before:content-['#'] before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent">
-      <a className="transition-colors text-gray hover:text-white" href={to || "#"}>
+    <li
+      className={clsx(
+        "before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']",
+        className
+      )}
+      {...rest}
+    >
+      <a className="text-gray transition-colors hover:text-white" href={to || "#"}>
         {children}
       </a>
     </li>

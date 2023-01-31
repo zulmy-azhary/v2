@@ -1,0 +1,17 @@
+.next
+node_modules
+public
+
+next-env.d.ts
+tailwind.config.js
+postcss.config.js
+
+yarn.lock
+package.json
+package-lock.json
+.prettierrc
+.eslintrc.json
+tsconfig.json
+tsconfig.node.json
+
+README.md

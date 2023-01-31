@@ -1,12 +1,19 @@
 import React from "react";
 import { Box } from "@/components/atoms";
+import { useToggle } from "@/context";
 
-const Hamburger: React.FC = () => {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Hamburger: React.FC<Props> = (props) => {
+  const { setOpen } = useToggle();
   return (
-    <div className="w-7 flex flex-col gap-y-2 cursor-pointer">
-      <Box className="border-none h-[2px] w-full bg-gray" />
-      <Box className="border-none h-[2px] w-full bg-gray" />
-      <Box className="border-none h-[2px] w-full bg-gray" />
+    <div
+      className="relative z-50 flex w-7 cursor-pointer flex-col items-end gap-y-2 md:hidden"
+      onClick={() => setOpen((prev) => !prev)}
+    >
+      <Box className="h-[2px] w-full border-none bg-gray" />
+      <Box className="h-[2px] w-9/12 border-none bg-gray" />
+      <Box className="h-[2px] w-5/6 border-none bg-gray" />
     </div>
   );
 };

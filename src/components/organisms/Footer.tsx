@@ -3,8 +3,8 @@ import { FooterContent, FooterCopyright, FooterMedia } from "@/components/molecu
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-10 px-6 border-t-[1px] border-gray">
-      <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto grid grid-cols-2 gap-y-8">
+    <footer className="border-t-[1px] border-gray py-10 px-6">
+      <div className="mx-auto grid max-w-xs grid-cols-2 gap-y-8 md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <FooterContent />
         <FooterMedia />
         <FooterCopyright />

@@ -7,10 +7,10 @@ const SocialMedia: React.FC = () => {
   return (
     <>
       {isTablet && (
-      <div className="hidden md:flex md:flex-col-reverse items-center gap-y-5 fixed z-50 md:bottom-0 md:left-2 xl:left-5">
-        <span className="w-[1px] h-52 bg-gray" />
-        <Icons />
-      </div>
+        <div className="fixed z-50 hidden items-center gap-y-5 md:bottom-0 md:left-2 md:flex md:flex-col-reverse xl:left-5">
+          <span className="h-60 w-[1px] bg-gray" />
+          <Icons />
+        </div>
       )}
     </>
   );

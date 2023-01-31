@@ -18,7 +18,7 @@ export const TagSphere: React.FC<Props> = (props) => {
     fullHeight,
     fullWidth,
     style,
-    useContainerInlineStyles,
+    useContainerInlineStyles
   }: TagSphereProps = { ...defaultState, ...props };
 
   let radius = props.radius;
@@ -33,9 +33,7 @@ export const TagSphere: React.FC<Props> = (props) => {
   const [items, setItems] = useState<any[]>([]);
 
   useEffect(() => {
-    setItems(() =>
-      texts.map((text, index) => createItem(text, index, texts.length, size, itemHooks[index]))
-    );
+    setItems(() => texts.map((text, index) => createItem(text, index, texts.length, size, itemHooks[index])));
   }, [texts]);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -95,18 +93,7 @@ export const TagSphere: React.FC<Props> = (props) => {
         return items.map((item: any) => updateItemPosition(item, sc, depth));
       }
     });
-  }, [
-    active,
-    depth,
-    firstRender,
-    keepRollingAfterMouseOut,
-    lessSpeed,
-    maxSpeed,
-    mouseX,
-    mouseY,
-    radius,
-    size,
-  ]);
+  }, [active, depth, firstRender, keepRollingAfterMouseOut, lessSpeed, maxSpeed, mouseX, mouseY, radius, size]);
 
   const init = () => {
     setActive(false);
@@ -157,11 +144,7 @@ export const TagSphere: React.FC<Props> = (props) => {
       onTouchEnd={() => {
         init();
       }}
-      style={
-        useContainerInlineStyles
-          ? style || defaultStyles.getContainer(radius, fullWidth, fullHeight)
-          : undefined
-      }
+      style={useContainerInlineStyles ? style || defaultStyles.getContainer(radius, fullWidth, fullHeight) : undefined}
     >
       {items.map((item) => item.el)}
     </div>

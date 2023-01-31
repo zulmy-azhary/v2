@@ -5,7 +5,7 @@ import { mainProjects } from "@/helpers/projects";
 const Projects: React.FC = () => {
   return (
     <Section section={"projects"} headingClassName="lg:grow">
-      <div className="gap-4 grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-6 xl:grid-cols-12">
         {mainProjects.map((project, i) => (
           <ProjectCard
             key={i}

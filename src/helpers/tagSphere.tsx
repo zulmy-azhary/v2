@@ -10,8 +10,8 @@ export const defaultStyles = {
       maxWidth: "100%",
       minHeight: `${2 * radius}px`,
       height: fullHeight ? "100%" : `${2 * radius}px`,
-      touchAction: "none",
-    } as CSSProperties),
+      touchAction: "none"
+    } as CSSProperties)
 };
 
 export const computeInitialPosition = (index: number, textsLength: number, size: number) => {
@@ -20,7 +20,7 @@ export const computeInitialPosition = (index: number, textsLength: number, size:
   return {
     x: (size * Math.cos(theta) * Math.sin(phi)) / 2,
     y: (size * Math.sin(theta) * Math.sin(phi)) / 2,
-    z: (size * Math.cos(phi)) / 2,
+    z: (size * Math.cos(phi)) / 2
   };
 };
 
@@ -91,7 +91,7 @@ export const createItem = (
     WebkitTransform: transform,
     MozTransform: transform,
     OTransform: transform,
-    transform: transform,
+    transform: transform
   } as CSSProperties;
   // @ts-ignore
   const itemEl = (
@@ -103,7 +103,7 @@ export const createItem = (
   return {
     ref: itemRef,
     el: itemEl,
-    ...computeInitialPosition(index, textsLength, size),
+    ...computeInitialPosition(index, textsLength, size)
   };
 };
 
@@ -115,5 +115,5 @@ export const defaultState: TagSphereProps = {
   keepRollingAfterMouseOut: true,
   useContainerInlineStyles: true,
   fullWidth: false,
-  fullHeight: false,
+  fullHeight: false
 };

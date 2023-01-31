@@ -11,17 +11,13 @@ const SkillCard: React.FC<Props> = (props) => {
   const { title, skills, className, ...rest } = props;
 
   return (
-    <Box className={clsx("lg:w-fit h-fit", className)} {...rest}>
-      <Box className="h-fit">
-        <h3 className="px-4 py-2 xl:text-lg">{title}</h3>
+    <Box className={clsx("h-fit lg:w-fit", className)} {...rest}>
+      <Box className="h-fit px-4 py-2">
+        <h3 className="xl:text-lg">{title}</h3>
       </Box>
-      <Box className="p-3 md:p-4 lg:p-3 xl:p-4">
+      <Box className={clsx("p-3 md:p-4 lg:p-3 xl:p-4", skills.length > 5 && "grid grid-flow-col grid-rows-4")}>
         {skills.map((skill, i) => (
-          <Text
-            className="text-sm xl:text-base text-gray font-light"
-            itemList
-            key={i}
-          >
+          <Text className="text-sm font-light text-gray xl:text-base" itemList key={i}>
             {skill}
           </Text>
         ))}

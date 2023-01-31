@@ -1,43 +1,37 @@
 import React from "react";
 import { Section, SkillCard, SkillObjects } from "@/components/molecules";
-import {
-  databases,
-  frameworkOrLibraries,
-  languages,
-  others,
-  uiFrameworkOrComponents,
-} from "@/helpers/skills";
+import { databases, frameworkOrLibraries, languages, others, uiFrameworkOrComponents } from "@/helpers/skills";
 
 const Skills: React.FC = () => {
   return (
     <Section section={"skills"} headingClassName="basis-5/12">
-      <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6">
+      <div className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
         <SkillObjects />
-        <div className="basis-3/5 lg:basis-4/6 xl:basis-3/5 grid grid-flow-row lg:grid-flow-col grid-cols-2 md:grid-cols-7 lg:grid-cols-1 lg:grid-rows-2 gap-5 lg:place-items-end">
+        <div className="grid basis-3/5 grid-flow-row grid-cols-2 gap-5 md:grid-cols-7 lg:basis-4/6 lg:grid-flow-col lg:grid-cols-1 lg:grid-rows-2 lg:place-items-end xl:basis-3/5">
           <SkillCard
             title="Languages"
             skills={languages}
-            className="md:col-start-3 md:col-span-2 lg:col-auto md:self-end lg:order-last"
+            className="md:col-span-2 md:col-start-3 md:self-end lg:order-last lg:col-auto"
           />
           <SkillCard
             title="Frameworks/Libraries"
             skills={frameworkOrLibraries}
-            className="order-first md:order-none md:col-start-5 col-span-2 md:col-span-3 lg:col-auto lg:col-start-3 xl:col-start-3 lg:row-start-1 xl:row-start-2 md:self-end xl:place-self-start"
+            className="order-first col-span-2 md:order-none md:col-span-3 md:col-start-5 md:self-end lg:col-auto lg:col-start-3 lg:row-start-1 xl:col-start-3 xl:row-start-2 xl:place-self-start"
           />
           <SkillCard
             title="Ui Frameworks/Components"
             skills={uiFrameworkOrComponents}
-            className="order-last md:order-first lg:order-none md:row-start-2 lg:row-start-2 xl:row-start-1 md:row-span-2 lg:row-auto col-span-2 md:col-span-3 lg:col-span-2 xl:col-span-1 lg:col-start-1 xl:col-start-3 md:self-center lg:self-start xl:self-end"
+            className="order-last col-span-2 md:order-first md:col-span-3 md:row-span-2 md:row-start-2 md:self-center lg:order-none lg:col-span-2 lg:col-start-1 lg:row-auto lg:row-start-2 lg:self-start xl:col-span-1 xl:col-start-3 xl:row-start-1 xl:self-end"
           />
           <SkillCard
             title="Databases"
             skills={databases}
-            className="md:col-start-6 md:col-span-2 xl:col-start-2 lg:col-start-3 lg:col-auto lg:row-start-2 xl:row-start-2 lg:justify-self-start lg:self-start xl:justify-self-end"
+            className="md:col-span-2 md:col-start-6 lg:col-auto lg:col-start-3 lg:row-start-2 lg:self-start lg:justify-self-start xl:col-start-2 xl:row-start-2 xl:justify-self-end"
           />
           <SkillCard
             title="Others"
             skills={others}
-            className="row-span-2 self-end md:self-center lg:self-end col-start-2 md:col-start-1 md:col-span-2 md:row-start-1 md:row-span-2 row-start-2 lg:col-auto lg:row-auto lg:order-first xl:col-start-2 xl:row-start-1"
+            className="col-start-2 row-span-2 row-start-2 self-end md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-1 md:self-center lg:order-first lg:col-auto lg:row-auto lg:self-end xl:col-start-2 xl:row-start-1"
           />
         </div>
       </div>

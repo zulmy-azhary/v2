@@ -35,7 +35,7 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
       <Navbar />
       <main
         className={clsx(
-          "max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto",
+          "mx-auto max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl",
           className ?? "min-h-screen",
           padding ?? "pt-36 md:pt-44 xl:pt-48"
         )}

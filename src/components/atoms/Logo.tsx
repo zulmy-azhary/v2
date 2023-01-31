@@ -8,14 +8,14 @@ interface Props extends React.SVGAttributes<HTMLOrSVGElement> {
 
 const Logo: React.FC<Props> = (props) => {
   const { className, width, height, ...rest } = props;
-  
+
   return (
     <svg
       width={width || "42"}
       height={height || "48"}
       viewBox={`0 0 ${width || "42"} ${height || "48"}`}
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx("transition-colors stroke-primary stroke-2", className)}
+      className={clsx("stroke-primary stroke-2 transition-colors", className)}
       fill="none"
       {...rest}
     >

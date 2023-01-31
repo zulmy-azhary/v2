@@ -5,4 +5,4 @@ export type Project = {
   techList: string[];
   liveUrl?: string;
   repoUrl: string;
-}
+};
