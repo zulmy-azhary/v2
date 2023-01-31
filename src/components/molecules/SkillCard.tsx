@@ -17,7 +17,7 @@ const SkillCard: React.FC<Props> = (props) => {
       </Box>
       <Box className={clsx("p-3 md:p-4 lg:p-3 xl:p-4", skills.length > 5 && "grid grid-flow-col grid-rows-4")}>
         {skills.map((skill, i) => (
-          <Text className="text-sm font-light text-gray xl:text-base" itemList key={i}>
+          <Text className="text-sm text-gray xl:text-base" itemList key={i}>
             {skill}
           </Text>
         ))}

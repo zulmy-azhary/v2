@@ -1,10 +1,13 @@
+import { Heading, Text } from "@/components/atoms";
 import { Layout } from "@/components/templates";
 import { NextPage } from "next";
 
 const Projects: NextPage = () => {
   return (
     <Layout title="All Projects" metaDescription="This is v2 of my portfolio" className="min-h-[1000px]">
-      Coming soon...
+      <Heading content={"before:content-['/']"}>projects</Heading>
+      <Text className="mt-3 text-gray">List of my projects</Text>
+      <Text className="mt-24">Coming soon...</Text>
     </Layout>
   );
 };

@@ -7,11 +7,13 @@ const FooterContent: React.FC = () => {
       <div className="flex items-center gap-x-6">
         <div className="flex items-center gap-x-1">
           <Logo className="scale-75 stroke-white" />
-          <Text className="text-2xl font-semibold">Zoel</Text>
+          <Text fontWeight="font-semibold" className="text-2xl">
+            Zoel
+          </Text>
         </div>
         <Text className="text-sm text-gray">zulmyazhary32@gmail.com</Text>
       </div>
-      <Text className="ml-2 text-center text-sm font-light md:text-start lg:text-base xl:w-5/6">
+      <Text className="ml-2 text-center text-sm md:text-start lg:text-base xl:w-5/6">
         Web designer and front-end developer based in Makassar, Indonesia
       </Text>
     </div>

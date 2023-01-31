@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonLink, TextHighlight } from "@/components/atoms";
+import { ButtonLink, Text, TextHighlight } from "@/components/atoms";
 
 const HeroContent: React.FC = () => {
   return (
@@ -7,9 +7,9 @@ const HeroContent: React.FC = () => {
       <h1 className="text-2xl font-medium leading-7 tracking-tight md:text-center md:leading-10 lg:text-start lg:text-3xl xl:text-4xl">
         I am Zoel, a <TextHighlight>web designer</TextHighlight> and <TextHighlight>front end developer</TextHighlight>
       </h1>
-      <p className="w-full text-justify text-sm tracking-wide text-gray md:text-center md:text-base lg:text-start lg:text-lg xl:w-11/12">
+      <Text className="w-full text-justify text-sm tracking-wide text-gray md:text-center md:text-base lg:text-start lg:text-lg xl:w-11/12">
         Design, building, and maintaining interactive and responsive websites especially for modern websites.
-      </p>
+      </Text>
       <ButtonLink variant="primary" href="#" className="self-end md:self-center lg:self-auto">
         Download CV
       </ButtonLink>

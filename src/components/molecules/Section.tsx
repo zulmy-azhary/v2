@@ -19,7 +19,9 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
       {...rest}
     >
       <div className="flex flex-row justify-between">
-        <Heading className={headingClassName}>{section}</Heading>
+        <Heading hasLine className={headingClassName}>
+          {section}
+        </Heading>
         {section === "projects" && (
           <ButtonLink
             className="self-end border-l-[1px] border-primary hover:text-primary md:self-auto"

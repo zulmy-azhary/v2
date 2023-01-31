@@ -7,7 +7,8 @@ const HeroStatus: React.FC = () => {
       <Box className="bg-bgColor py-2 px-3 md:px-5 lg:px-3 xl:px-5">
         <Text
           itemList
-          className="relative z-10 flex gap-x-2 text-xs font-normal md:gap-x-3 md:text-base lg:gap-x-2 lg:text-sm xl:gap-x-3 xl:text-base"
+          fontWeight="font-normal"
+          className="relative z-10 flex gap-x-2 text-xs md:gap-x-3 md:text-base lg:gap-x-2 lg:text-sm xl:gap-x-3 xl:text-base"
         >
           Currently learning
           <TextHighlight className="from-springGreen to-pigmentBlue">Vue</TextHighlight>
@@ -15,7 +16,7 @@ const HeroStatus: React.FC = () => {
           <TextHighlight className="from-red-300 to-red-500">Svelte</TextHighlight>
         </Text>
       </Box>
-      <Text className="ml-auto w-fit bg-bgColor py-1 text-xs font-normal text-gray md:text-sm">
+      <Text fontWeight="font-normal" className="ml-auto w-fit bg-bgColor py-1 text-xs text-gray md:text-sm">
         Makassar, Indonesia
       </Text>
     </div>
