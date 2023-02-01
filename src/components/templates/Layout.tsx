@@ -11,7 +11,6 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 
 const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { title = "Loading...", metaDescription, padding, children, className, ...rest } = props;
-
   const defaultTitle = `Zulmy Azhary AS | ${title}`;
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
 
     const interval = setInterval(handleTitle, 500);
     return () => clearInterval(interval);
-  });
+  }, [title]);
 
   return (
     <>

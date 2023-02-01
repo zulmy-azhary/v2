@@ -1,8 +1,16 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": "next",
   "rules": {
     "semi": [2, "always"],
-    "quotes": [2, "double", { "avoidEscape": true }]
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "no-empty-function": "error",
+    "no-confusing-arrow": "error",
+    "no-console": "warn",
+    "no-multiple-empty-lines": "error",
+    "no-unused-vars": "error",
+    "no-unused-labels": "error",
+    "no-const-assign": "error",
+    "no-useless-return": "error"
   },
   "ignorePatterns": ["**/node_modules/*", "**/public/*", "**/*.config.js", "**/*.d.ts", "**/*.json"]
 }

@@ -12,7 +12,7 @@ const ProjectCard: React.FC<Props> = (props) => {
   return (
     <Box className="h-fit w-full md:col-span-3 xl:col-span-4">
       {src && (
-        <Box className="overflow-hidden">
+        <Box className="overflow-hidden" border="border-b">
           <Image
             className="aspect-video w-auto cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
             src={src}
@@ -23,10 +23,10 @@ const ProjectCard: React.FC<Props> = (props) => {
           />
         </Box>
       )}
-      <Box className="px-5 py-2">
+      <Box className="px-5 py-2" border="border-b">
         <Text className="text-xl">{title}</Text>
       </Box>
-      <Box className="flex flex-col gap-y-5 p-5">
+      <Box className="flex flex-col gap-y-5 p-5" border="border-b">
         <Text className="text-sm text-gray">
           {description ?? "Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
         </Text>
@@ -46,6 +46,7 @@ const ProjectCard: React.FC<Props> = (props) => {
           "grid grid-flow-col px-3 py-2 text-gray md:grid-cols-none lg:gap-x-3",
           techList.length < 3 ? "grid-rows-2" : "grid-rows-3"
         )}
+        border="border-none"
       >
         {techList.map((tech, i) => (
           <Text itemList className="text-xs md:text-sm" key={i}>
