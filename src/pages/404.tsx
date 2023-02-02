@@ -1,6 +1,6 @@
-import { ButtonLink, Text } from "@/components/atoms";
 import { Layout } from "@/components/templates";
-import { NextPage } from "next";
+import type { NextPage } from "next";
+import { ButtonLink, Text } from "@/components/atoms";
 
 const Custom404: NextPage = () => {
   return (

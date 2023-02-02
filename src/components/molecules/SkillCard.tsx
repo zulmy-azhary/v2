@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Text } from "@/components/atoms";
 import clsx from "clsx";
+import { Box, Text } from "@/components/atoms";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

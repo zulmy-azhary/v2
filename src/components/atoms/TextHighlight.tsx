@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-interface Props extends React.HTMLAttributes<HTMLSpanElement> {}
+type Props = React.HTMLAttributes<HTMLSpanElement>;
 
 const TextHighlight: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { children, className, ...rest } = props;

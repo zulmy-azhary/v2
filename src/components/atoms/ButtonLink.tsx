@@ -1,6 +1,6 @@
-import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
+import clsx from "clsx";
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary";

@@ -1,5 +1,5 @@
+import { Icons } from "@/components/molecules";
 import React from "react";
-import { Icons } from "../molecules";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const SocialMedia: React.FC = () => {

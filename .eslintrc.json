@@ -1,5 +1,7 @@
 {
-  "extends": "next",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "semi": [2, "always"],
     "quotes": [2, "double", { "avoidEscape": true }],
@@ -10,7 +12,10 @@
     "no-unused-vars": "error",
     "no-unused-labels": "error",
     "no-const-assign": "error",
-    "no-useless-return": "error"
+    "no-useless-return": "error",
+    "@typescript-eslint/consistent-type-imports": ["error", {"prefer": "type-imports"}],
+    "sort-imports": ["error", {"memberSyntaxSortOrder": ["none", "single", "multiple", "all"]}],
+    "no-restricted-imports": ["error", {"patterns": ["../"]}]
   },
   "ignorePatterns": ["**/node_modules/*", "**/public/*", "**/*.config.js", "**/*.d.ts", "**/*.json"]
 }

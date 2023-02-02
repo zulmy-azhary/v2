@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import type { Items, TagSphereProps } from "@/types/tagCloud";
+import { type ReactNode, createRef, useCallback, useEffect, useRef, useState } from "react";
 import { createItem, defaultState, defaultStyles, updateItemPosition } from "@/helpers/tagSphere";
-import { TagSphereProps } from "@/types/tagCloud";
-import { createRef, ReactNode, useEffect, useRef, useState, useCallback } from "react";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   radius?: number;
@@ -30,10 +30,14 @@ export const TagSphere: React.FC<Props> = (props) => {
   const depth = 1 * radius;
   const size = 1.5 * radius;
   const itemHooks = texts.map(() => createRef());
-  const [items, setItems] = useState<any[]>([]);
+  const [items, setItems] = useState<Items[]>([]);
 
   useEffect(() => {
-    setItems(() => texts.map((text, index) => createItem(text, index, texts.length, size, itemHooks[index])));
+    setItems(() =>
+      texts.map((text, index) =>
+        createItem(text, index, texts.length, size, itemHooks[index] as unknown as HTMLElement)
+      )
+    );
   }, [texts]);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -63,7 +67,7 @@ export const TagSphere: React.FC<Props> = (props) => {
   };
 
   const next = useCallback(() => {
-    setItems((items: any) => {
+    setItems((items) => {
       if (lessSpeed == 0) return items;
       let a: number, b: number;
 
@@ -90,8 +94,9 @@ export const TagSphere: React.FC<Props> = (props) => {
         const l = Math.PI / 180;
         const sc = [Math.sin(a * l), Math.cos(a * l), Math.sin(b * l), Math.cos(b * l)];
 
-        return items.map((item: any) => updateItemPosition(item, sc, depth));
+        return items.map((item) => updateItemPosition(item, sc, depth));
       }
+      return items;
     });
   }, [active, depth, firstRender, keepRollingAfterMouseOut, lessSpeed, maxSpeed, mouseX, mouseY, radius, size]);
 
@@ -108,7 +113,7 @@ export const TagSphere: React.FC<Props> = (props) => {
 
   useEffect(() => {
     init();
-    setItems((items: any) => [...items]);
+    setItems((items) => [...items]);
   }, []);
 
   useEffect(() => {

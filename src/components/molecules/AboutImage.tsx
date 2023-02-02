@@ -1,9 +1,9 @@
-import React from "react";
-import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { TagSphere } from "@/components/atoms";
 import Image from "next/image";
-import { allSkills as skills } from "@/helpers/skills";
+import React from "react";
+import { TagSphere } from "@/components/atoms";
 import { shuffle } from "@/helpers/functions";
+import { allSkills as skills } from "@/helpers/skills";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const AboutImage: React.FC = () => {
   const isTablet = useMediaQuery("(min-width: 768px)");

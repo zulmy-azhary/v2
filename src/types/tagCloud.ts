@@ -1,4 +1,4 @@
-import type { ReactNode, CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export type TagSphereProps = {
   texts: (string | ReactNode)[];
@@ -12,4 +12,12 @@ export type TagSphereProps = {
   useContainerInlineStyles: boolean;
   fullWidth: boolean;
   fullHeight: boolean;
+};
+
+export type Items = {
+  x: number;
+  y: number;
+  z: number;
+  ref: HTMLElement;
+  el: JSX.Element;
 };

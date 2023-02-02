@@ -1,6 +1,6 @@
-import { Heading, Text } from "@/components/atoms";
 import { Layout } from "@/components/templates";
-import { NextPage } from "next";
+import type { NextPage } from "next";
+import { Heading, Text } from "@/components/atoms";
 
 const Projects: NextPage = () => {
   return (

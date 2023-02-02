@@ -1,5 +1,5 @@
-import React from "react";
 import { Box } from "@/components/atoms";
+import React from "react";
 
 const QuoteText: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (

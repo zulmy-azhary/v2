@@ -1,6 +1,6 @@
+import Image from "next/image";
 import React from "react";
 import { Box, Dots } from "@/components/atoms";
-import Image from "next/image";
 
 const SkillObjects: React.FC = () => {
   return (

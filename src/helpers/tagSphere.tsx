@@ -1,6 +1,6 @@
-import { TagSphereProps } from "@/types/tagCloud";
-import { CSSProperties, ReactNode } from "react";
 import { allSkills } from "./skills";
+import type { CSSProperties, MutableRefObject, ReactNode, RefObject } from "react";
+import type { Items, TagSphereProps } from "@/types/tagCloud";
 
 export const defaultStyles = {
   getContainer: (radius: number, fullWidth: boolean, fullHeight: boolean) =>
@@ -24,7 +24,7 @@ export const computeInitialPosition = (index: number, textsLength: number, size:
   };
 };
 
-export const updateItemPosition = (item: any, sc: number[], depth: number) => {
+export const updateItemPosition = (item: Items, sc: number[], depth: number): Items => {
   const newItem = { ...item, scale: "" };
   const rx1 = item.x;
   const ry1 = item.y * sc[1] + item.z * -sc[0];
@@ -47,21 +47,19 @@ export const updateItemPosition = (item: any, sc: number[], depth: number) => {
   let alpha: number = per * per - 0.25;
   alpha = parseFloat((alpha > 1 ? 1 : alpha).toFixed(3));
 
-  const itemEl = newItem.ref.current;
+  const itemEl = (newItem.ref as unknown as MutableRefObject<HTMLElement>).current;
   if (itemEl) {
     const left = (newItem.x - itemEl.offsetWidth / 2).toFixed(2);
     const top = (newItem.y - itemEl.offsetHeight / 2).toFixed(2);
     const transform = `translate3d(${left}px, ${top}px, 0) scale(${newItem.scale})`;
 
-    itemEl.style.WebkitTransform = transform;
-    itemEl.style.MozTransform = transform;
-    itemEl.style.OTransform = transform;
+    itemEl.style.webkitTransform = transform;
     itemEl.style.transform = transform;
     itemEl.style.filter = `grayscale(${(alpha - 1) * -8}) blur(${
       (alpha - 1) * -5 > 1 ? Math.floor((alpha - 1) * -8) : 0
     }px)`;
-    itemEl.style.zIndex = Math.floor(alpha * 1000);
-    itemEl.style.opacity = alpha;
+    itemEl.style.zIndex = String(Math.floor(alpha * 1000));
+    itemEl.style.opacity = String(alpha);
   }
 
   return newItem;
@@ -72,8 +70,8 @@ export const createItem = (
   index: number,
   textsLength: number,
   size: number,
-  itemRef: any
-) => {
+  itemRef: HTMLElement
+): Items => {
   const transformOrigin = "50% 50%";
   const transform = "translate3d(-50%, -50%, 0) scale(1)";
   const itemStyles = {
@@ -93,9 +91,8 @@ export const createItem = (
     OTransform: transform,
     transform: transform
   } as CSSProperties;
-  // @ts-ignore
   const itemEl = (
-    <span ref={itemRef} key={index} style={itemStyles}>
+    <span ref={itemRef as unknown as RefObject<HTMLElement>} key={index} style={itemStyles}>
       {text}
     </span>
   );

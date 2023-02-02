@@ -22,7 +22,7 @@ const AboutContent: React.FC = () => {
       />
       <Dots
         size={20}
-        className="absolute -bottom-20 -left-2 -z-20 -rotate-12 grid-cols-5 gap-x-5 gap-y-3 md:left-20 lg:-bottom-24 lg:-left-12 xl:-bottom-32 xl:-left-24"
+        className="absolute -bottom-[4.5rem] -left-2 -z-20 -rotate-12 grid-cols-5 gap-x-5 gap-y-3 md:left-20 lg:-bottom-24 lg:-left-12 xl:-bottom-32 xl:-left-24"
       />
     </div>
   );

@@ -4,7 +4,7 @@ export const useOnClickOutside = (
   state: boolean,
   handler: () => void
 ): React.MutableRefObject<HTMLElement | undefined> => {
-  let menuRef = useRef<HTMLElement | undefined>(undefined);
+  const menuRef = useRef<HTMLElement | undefined>(undefined);
 
   useEffect(() => {
     if (!state) return;

@@ -1,5 +1,5 @@
-import { NextPage } from "next";
 import { Layout } from "@/components/templates";
+import type { NextPage } from "next";
 import { About, Contact, Hero, Projects, Quote, Skills, SocialMedia } from "@/components/organisms";
 
 const Home: NextPage = () => {

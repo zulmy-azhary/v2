@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
 import { useToggle } from ".";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface ScrollCtx {
   scroll: boolean;

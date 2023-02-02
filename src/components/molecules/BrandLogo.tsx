@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React from "react";
 import { Logo } from "@/components/atoms";
+import React from "react";
 
 const BrandLogo: React.FC = () => {
   return (

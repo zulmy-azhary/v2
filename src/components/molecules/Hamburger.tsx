@@ -1,5 +1,5 @@
-import React from "react";
 import { Box } from "@/components/atoms";
+import React from "react";
 import { useToggle } from "@/context";
 
 type Props = React.HTMLAttributes<HTMLDivElement>;

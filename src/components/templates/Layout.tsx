@@ -1,7 +1,7 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
-import { Footer, Navbar } from "@/components/organisms";
 import clsx from "clsx";
+import { Footer, Navbar } from "@/components/organisms";
+import React, { useEffect } from "react";
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
   title: string;

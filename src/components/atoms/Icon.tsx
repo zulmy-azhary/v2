@@ -1,5 +1,5 @@
-import React from "react";
 import type { IconType } from "react-icons";
+import React from "react";
 import clsx from "clsx";
 
 interface Props extends React.SVGAttributes<HTMLOrSVGElement> {
@@ -11,7 +11,7 @@ const Icon: React.FC<Props> = (props) => {
 
   return (
     <IconName
-      className={clsx("h-7 w-7 cursor-pointer text-gray transition-colors hover:text-primary", className)}
+      className={clsx("h-6 w-6 cursor-pointer text-gray transition-colors hover:text-primary lg:h-7 lg:w-7", className)}
       {...rest}
     />
   );

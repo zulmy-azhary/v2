@@ -1,7 +1,7 @@
-import React from "react";
-import { AiFillGithub, AiFillFacebook, AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Icon } from "@/components/atoms";
 import type { IconType } from "react-icons";
+import React from "react";
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineInstagram } from "react-icons/ai";
 
 type Item = {
   iconName: IconType;

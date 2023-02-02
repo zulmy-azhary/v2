@@ -1,8 +1,8 @@
-import React from "react";
-import { Box, ButtonLink, Text } from "@/components/atoms";
 import Image from "next/image";
-import clsx from "clsx";
 import type { Project } from "@/types";
+import React from "react";
+import clsx from "clsx";
+import { Box, ButtonLink, Text } from "@/components/atoms";
 
 type Props = Project;
 
@@ -24,10 +24,10 @@ const ProjectCard: React.FC<Props> = (props) => {
         </Box>
       )}
       <Box className="px-5 py-2" border="border-b">
-        <Text className="text-xl">{title}</Text>
+        <Text className="lg:text-lg xl:text-xl">{title}</Text>
       </Box>
       <Box className="flex flex-col gap-y-5 p-5" border="border-b">
-        <Text className="text-sm text-gray">
+        <Text className="text-xs text-gray md:text-sm">
           {description ?? "Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
         </Text>
         <div className="flex flex-row-reverse gap-x-3">

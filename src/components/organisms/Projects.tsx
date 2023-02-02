@@ -1,6 +1,6 @@
 import React from "react";
-import { ProjectCard, Section } from "@/components/molecules";
 import { mainProjects } from "@/helpers/projects";
+import { ProjectCard, Section } from "@/components/molecules";
 
 const Projects: React.FC = () => {
   return (
