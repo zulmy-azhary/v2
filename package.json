@@ -9,6 +9,7 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "lint": "next lint",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js && npm run lint",
     "check-types": "tsc --pretty --noEmit",
     "check-all": "npm run check-format && npm run lint && npm run check-types && npm run build",
     "prepare": "husky install"
@@ -27,13 +28,16 @@
     "clsx": "^1.2.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.4",
+    "framer-motion": "^9.0.1",
     "next": "13.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
+    "react-scroll": "^1.8.9",
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.6",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "autoprefixer": "^10.4.13",

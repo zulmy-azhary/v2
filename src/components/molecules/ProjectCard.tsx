@@ -23,11 +23,13 @@ const ProjectCard: React.FC<Props> = (props) => {
           />
         </Box>
       )}
-      <Box className="px-5 py-2" border="border-b">
-        <Text className="lg:text-lg xl:text-xl">{title}</Text>
+      <Box className="px-3 py-2 md:px-5" border="border-b">
+        <Text fontWeight="font-normal" className="lg:text-lg xl:text-xl">
+          {title}
+        </Text>
       </Box>
-      <Box className="flex flex-col gap-y-5 p-5" border="border-b">
-        <Text className="text-xs text-gray md:text-sm">
+      <Box className="flex flex-col gap-y-5 p-3 md:p-5" border="border-b">
+        <Text className="text-sm text-gray">
           {description ?? "Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
         </Text>
         <div className="flex flex-row-reverse gap-x-3">

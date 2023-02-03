@@ -1,23 +1,21 @@
 import React from "react";
 import clsx from "clsx";
+import { Link as ReactScrollLink, type ScrollLinkProps } from "react-scroll";
 
-interface Props extends React.LiHTMLAttributes<HTMLLIElement> {
-  to?: string;
-}
+type Props = ScrollLinkProps<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 
 const Link: React.FC<React.PropsWithChildren<Props>> = ({ children, to, className, ...rest }) => {
   return (
-    <li
-      className={clsx(
-        "before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']",
-        className
-      )}
+    <ReactScrollLink
+      duration={500}
+      smooth={true}
+      className={clsx("text-gray transition-colors hover:text-white", className)}
+      href={`#${to}`}
+      to={to}
       {...rest}
     >
-      <a className="text-gray transition-colors hover:text-white" href={to || "#"}>
-        {children}
-      </a>
-    </li>
+      {children}
+    </ReactScrollLink>
   );
 };
 

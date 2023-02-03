@@ -7,7 +7,7 @@ const FooterContent: React.FC = () => {
       <div className="flex items-center justify-center gap-x-4 md:justify-start lg:gap-x-6">
         <div className="flex items-center gap-x-1">
           <Logo className="scale-75 stroke-white" />
-          <Text fontWeight="font-semibold" className="text-lg md:text-2xl">
+          <Text fontWeight="font-semibold" className="text-xl md:text-2xl">
             Zoel
           </Text>
         </div>

@@ -18,9 +18,16 @@ const Navbar: React.FC = () => {
       <nav className="mx-auto flex max-w-xs items-center justify-between md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <BrandLogo />
         <aside ref={asideRef as React.RefObject<HTMLElement>}>
-          {isTablet ? isHomePage && <NavList /> : <Hamburger />}
+          {isHomePage ? (
+            isTablet ? (
+              <NavList />
+            ) : (
+              <Hamburger />
+            )
+          ) : (
+            <ButtonLink className="text-gray hover:text-white">{"<~~"} Back</ButtonLink>
+          )}
           {!isTablet && isOpen && <NavList />}
-          {!isHomePage && isTablet && <ButtonLink className="text-gray hover:text-white">{"<~~"} Back</ButtonLink>}
         </aside>
       </nav>
     </header>

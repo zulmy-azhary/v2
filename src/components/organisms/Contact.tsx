@@ -10,7 +10,7 @@ import { Box, Text } from "@/components/atoms";
 const Contact: React.FC = () => {
   return (
     <Section section={"contacts"}>
-      <div className="flex flex-col items-center justify-between gap-y-6 lg:flex-row">
+      <div className="flex flex-col items-center justify-between gap-y-12 lg:flex-row">
         <Image
           src="/assets/contact-bg.svg"
           width={512}
@@ -19,8 +19,8 @@ const Contact: React.FC = () => {
           className="w-full basis-2/4 select-none object-contain md:w-11/12 lg:w-7/12 lg:basis-6/12 xl:w-2/4"
           priority
         />
-        <div className="flex grow basis-2/4 flex-col items-center justify-between gap-y-10 lg:basis-5/12 lg:items-end">
-          <Text className="text-center text-xs text-gray md:text-sm lg:text-end lg:text-base xl:w-5/6">
+        <div className="flex grow basis-2/4 flex-col items-center justify-between gap-y-5 lg:basis-5/12 lg:items-end lg:gap-y-10">
+          <Text className="text-center text-sm text-gray lg:text-end lg:text-base xl:w-5/6">
             I&apos;m interested in freelance opportunities. However, if you have other requests or questions, don&apos;t
             hesitate to contact me.
           </Text>

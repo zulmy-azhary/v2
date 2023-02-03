@@ -21,6 +21,7 @@ const Button: React.FC<React.PropsWithChildren<Props>> = (props) => {
         btnVariant,
         className
       )}
+      scroll={false}
       {...rest}
     >
       {children}

@@ -1,24 +1,28 @@
 import "@/styles/globals.css";
+import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import clsx from "clsx";
 import { firaCode } from "@/styles/fonts";
 import { ScrollProvider, ToggleProvider } from "@/context";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
+  const url = router.route;
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <div className={clsx(firaCode.variable, "overflow-hidden font-firaCode")}>
-        <ToggleProvider>
-          <ScrollProvider>
-            <Component {...pageProps} />
-          </ScrollProvider>
-        </ToggleProvider>
-      </div>
+      <ToggleProvider>
+        <ScrollProvider>
+          <div className={clsx(firaCode.variable, "overflow-hidden font-firaCode")}>
+            <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+              <Component key={url} {...pageProps} />
+            </AnimatePresence>
+          </div>
+        </ScrollProvider>
+      </ToggleProvider>
     </>
   );
 }
