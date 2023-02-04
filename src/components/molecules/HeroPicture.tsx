@@ -9,6 +9,7 @@ const HeroPicture: React.FC = () => {
         className="absolute -left-4 -top-6 -z-10 h-44 w-36 select-none md:-left-10 md:top-6 md:h-52 md:w-48"
         width={250}
         height={250}
+        priority
         src={"/assets/brand-logo.svg"}
         alt="Logo Background"
       />

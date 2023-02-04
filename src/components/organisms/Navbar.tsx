@@ -4,7 +4,9 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { useRouter } from "next/router";
 import { useToggle } from "@/context";
-import { BrandLogo, Hamburger, NavList } from "@/components/molecules";
+import { BrandLogo, Hamburger, NavList, Sidebar } from "@/components/molecules";
+
+const items = ["about", "skills", "projects", "contacts"];
 
 const Navbar: React.FC = () => {
   const { pathname } = useRouter();
@@ -20,14 +22,16 @@ const Navbar: React.FC = () => {
         <aside ref={asideRef as React.RefObject<HTMLElement>}>
           {isHomePage ? (
             isTablet ? (
-              <NavList />
+              <NavList items={items} />
             ) : (
-              <Hamburger />
+              <>
+                <Sidebar isOpen={isOpen} items={items} />
+                <Hamburger />
+              </>
             )
           ) : (
             <ButtonLink className="text-gray hover:text-white">{"<~~"} Back</ButtonLink>
           )}
-          {!isTablet && isOpen && <NavList />}
         </aside>
       </nav>
     </header>

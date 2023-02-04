@@ -4,10 +4,10 @@ import { ButtonLink, Heading } from "@/components/atoms";
 
 type SectionType = "about" | "projects" | "skills" | "contacts";
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
-  section: SectionType;
+type Props = React.HTMLAttributes<HTMLElement> & {
+  section?: SectionType;
   headingClassName?: string;
-}
+};
 
 const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { children, section, className, headingClassName, ...rest } = props;

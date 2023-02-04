@@ -1,19 +1,21 @@
 import { Link } from "@/components/atoms";
 import React from "react";
 
-const links = ["about", "skills", "projects", "contacts"];
+interface Props {
+  items: string[];
+}
 
-const NavList: React.FC = () => {
+const NavList: React.FC<Props> = ({ items }) => {
   return (
-    <ul className="fixed inset-0 flex flex-col gap-y-10 gap-x-7 bg-bgColor px-7 pt-48 md:static md:flex-row md:gap-y-0 md:bg-transparent md:px-0 md:pt-0">
-      {links.map((link, i) => (
+    <ul className="flex gap-x-7 px-7 pt-48 md:px-0 md:pt-0">
+      {items.map((item, i) => (
         <li
           key={i}
           className={
-            "text-3xl before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#'] md:text-base"
+            "text-base before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
           }
         >
-          <Link to={link}>{link}</Link>
+          <Link to={item}>{item}</Link>
         </li>
       ))}
     </ul>
