@@ -1,4 +1,4 @@
-export type ProjectType = "main" | "others";
+export type ProjectType = "main" | "unfinished" | "others";
 
 export type Project = {
   id: number;

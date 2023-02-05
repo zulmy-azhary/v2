@@ -1,6 +1,6 @@
 import type { Project } from "@/types";
 
-export const allProjects: Project[] = [
+const mainProjects: Project[] = [
   {
     id: 1,
     title: "Rest Countries",
@@ -54,9 +54,22 @@ export const allProjects: Project[] = [
     repoUrl: "https://github.com/zulmy-azhary/fake-store",
     liveUrl: "https://fake-store-demo.vercel.app/store",
     type: "main"
-  },
+  }
+];
+
+const unfinishedProjects: Project[] = [
   {
-    id: 7,
+    id: 1,
+    title: "MERN App",
+    techList: ["Typecript", "MongoDB", "ExpressJs", "ReactJs", "NodeJs", "Mongoose", "TailwindCSS", "Nodemon", "Vite"],
+    repoUrl: "https://github.com/zulmy-azhary/mern-app",
+    type: "unfinished"
+  }
+];
+
+const otherProjects: Project[] = [
+  {
+    id: 1,
     title: "Easybank Landingpage",
     src: "/assets/projects/easybank.jpg",
     techList: ["Javascript", "ReactJs"],
@@ -65,12 +78,62 @@ export const allProjects: Project[] = [
     type: "others"
   },
   {
-    id: 8,
+    id: 2,
+    title: "Rock Paper Scissors",
+    src: "/assets/projects/rock-paper-scissors.jpg",
+    techList: ["Typescript", "ReactJs", "Styled Components", "Framer Motion", "Vite"],
+    repoUrl: "https://github.com/zulmy-azhary/roshambo",
+    liveUrl: "https://roshambo-minigame.vercel.app/",
+    type: "others"
+  },
+  {
+    id: 3,
+    title: "Sunnyside Landingpage",
+    src: "/assets/projects/sunnyside.jpg",
+    techList: ["Typescript", "Vue", "TailwindCSS"],
+    repoUrl: "https://github.com/zulmy-azhary/sunnyside-landingpage",
+    liveUrl: "https://zoel-sunnyside.vercel.app/",
+    type: "others"
+  },
+  {
+    id: 4,
+    title: "Krypto Landingpage",
+    techList: ["Typescript", "NextJs", "Styled Components"],
+    repoUrl: "https://github.com/zulmy-azhary/krypto-landingpage",
+    type: "others"
+  },
+  {
+    id: 5,
+    title: "Todo React TS",
+    techList: ["Typescript", "ReactJs", "Material UI", "Vite"],
+    repoUrl: "https://github.com/zulmy-azhary/todo-react-ts",
+    liveUrl: "https://todo-reactts.vercel.app/",
+    type: "others"
+  },
+  {
+    id: 6,
+    title: "React Notes",
+    techList: ["Javascript", "ReactJs"],
+    repoUrl: "https://github.com/zulmy-azhary/react-notes",
+    type: "others"
+  },
+  {
+    id: 7,
     title: "Calculator App",
     src: "/assets/projects/calculator-app.jpg",
     techList: ["Typescript", "Svelte"],
     repoUrl: "https://github.com/zulmy-azhary/calculator-app",
     liveUrl: "https://zoel-calculator.vercel.app/",
     type: "others"
+  },
+  {
+    id: 8,
+    title: "Realtime Chat App",
+    techList: ["Javascript", "NextJs", "Firebase", "Chakra UI"],
+    repoUrl: "https://github.com/zulmy-azhary/realtime-chat-app",
+    liveUrl: "https://next-chatapp.vercel.app/",
+    type: "others"
   }
 ];
+
+export const allProjects: Project[] = [...mainProjects, ...unfinishedProjects, ...otherProjects];

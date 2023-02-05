@@ -9,6 +9,7 @@ const Projects: NextPage = () => {
       <Heading content={"before:content-['/']"}>projects</Heading>
       <Text className="mt-3 text-gray">List of my projects</Text>
       <ProjectComponent headingTitle="main-projects" type="main" hasLine={false} />
+      <ProjectComponent headingTitle="unfinished-projects" type="unfinished" hasLine={false} />
       <ProjectComponent headingTitle="other-projects" type="others" hasLine={false} />
     </Layout>
   );

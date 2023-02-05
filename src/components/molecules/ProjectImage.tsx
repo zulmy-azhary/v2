@@ -13,7 +13,7 @@ const ProjectImage: React.FC<Props> = ({ src, title }) => {
       {src && (
         <Box className="overflow-hidden" border="border-b">
           <Image
-            className="aspect-video w-auto cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
+            className="aspect-video w-full cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
             src={src}
             width={512}
             height={512}
