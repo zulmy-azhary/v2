@@ -19,12 +19,18 @@ module.exports = {
         springGreen: "#2AF598",
         pigmentBlue: "#3437AA",
       },
+      maxWidth: {
+        "8xl": "104rem",
+        "9xl": "125rem"
+      }
     },
     screens: {
       sm: "375px",
       md: "768px",
       lg: "1024px",
       xl: "1440px",
+      "2xl": "2000px",
+      "3xl": "2560px",
     },
   },
   plugins: [],

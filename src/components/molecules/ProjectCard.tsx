@@ -3,7 +3,7 @@ import type { Project } from "@/types";
 import React from "react";
 import { ProjectDescription, ProjectImage, ProjectTechList, ProjectTitle } from ".";
 
-type Props = Project;
+type Props = Omit<Project, "id" | "type">;
 
 const ProjectCard: React.FC<Props> = (props) => {
   const { src, title, description, techList, liveUrl, repoUrl } = props;

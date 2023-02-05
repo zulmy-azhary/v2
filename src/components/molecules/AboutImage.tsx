@@ -17,10 +17,11 @@ const AboutImage: React.FC = () => {
     return (
       <Image
         key={i}
-        className="select-none"
+        className="xxl:w-16 w-8 select-none object-contain md:w-10"
         src={`/assets/icons/${textFiltered.toLowerCase()}.svg`}
         width={imageSize}
         height={imageSize}
+        priority
         alt="Icon Image"
       />
     );

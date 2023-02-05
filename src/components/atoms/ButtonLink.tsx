@@ -17,7 +17,7 @@ const Button: React.FC<React.PropsWithChildren<Props>> = (props) => {
     <Link
       href={(href as string) || "/"}
       className={clsx(
-        "w-fit bg-opacity-0 py-2 px-5 text-xs transition-colors hover:bg-opacity-20 md:text-sm lg:text-base",
+        "w-fit bg-opacity-0 py-2 px-5 text-xs transition-colors hover:bg-opacity-20 md:text-sm lg:text-base 2xl:text-xl",
         btnVariant,
         className
       )}

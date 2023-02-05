@@ -42,9 +42,9 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
         exit="exit"
         transition={{ duration: 0.5 }}
         className={clsx(
-          "mx-auto max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl",
+          "mx-auto max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-8xl 3xl:max-w-9xl",
           className ?? "min-h-screen",
-          padding ?? "pt-36 pb-32 md:pt-44 lg:pt-40 xl:pt-48"
+          padding ?? "pt-36 pb-32 md:pt-44 lg:pt-40 xl:pt-48 2xl:pt-72"
         )}
         {...rest}
       >

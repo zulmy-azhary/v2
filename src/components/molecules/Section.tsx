@@ -5,12 +5,15 @@ import { ButtonLink, Heading } from "@/components/atoms";
 type SectionType = "about" | "projects" | "skills" | "contacts";
 
 type Props = React.HTMLAttributes<HTMLElement> & {
-  section?: SectionType;
+  section?: SectionType | string;
+  headingTitle?: string;
   headingClassName?: string;
+  hasLine?: boolean;
+  hasDetails?: boolean;
 };
 
 const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
-  const { children, section, className, headingClassName, ...rest } = props;
+  const { hasLine = true, hasDetails, children, section, className, headingTitle, headingClassName, ...rest } = props;
 
   return (
     <section
@@ -19,10 +22,10 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
       {...rest}
     >
       <div className="flex flex-row justify-between">
-        <Heading hasLine className={headingClassName}>
-          {section}
+        <Heading hasLine={hasLine} className={headingClassName}>
+          {headingTitle ?? section}
         </Heading>
-        {section === "projects" && (
+        {section === "projects" && hasDetails && (
           <ButtonLink
             className="self-end border-l-[1px] border-primary hover:text-primary md:self-auto"
             href="/projects"

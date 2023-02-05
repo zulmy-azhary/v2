@@ -1,11 +1,30 @@
+import { AiOutlineMail } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import type { IconType } from "react-icons";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Section } from "@/components/molecules";
-import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
 import { Box, Text } from "@/components/atoms";
+
+type Contact = {
+  icon: IconType;
+  text: string;
+  url: string;
+};
+
+const contacts: Contact[] = [
+  {
+    icon: FaDiscord,
+    text: "Zoel#5767",
+    url: "https://discord.com/users/1015875403627364362"
+  },
+  {
+    icon: AiOutlineMail,
+    text: "zulmyazhary32@gmail.com",
+    url: "mailto:zulmyazhary32@gmail.com"
+  }
+];
 
 const Contact: React.FC = () => {
   return (
@@ -25,7 +44,7 @@ const Contact: React.FC = () => {
             hesitate to contact me.
           </Text>
           <Box className="flex flex-col gap-y-3 p-4 xl:w-2/4">
-            <Text className="text-sm md:text-base">Let&apos;s connect :</Text>
+            <Text className="text-sm md:text-lg">Let&apos;s connect :</Text>
             <div className="flex flex-col gap-y-1 text-sm">
               {contacts.map(({ icon: Icon, url, text }: Contact, i: number) => (
                 <Link
@@ -34,8 +53,8 @@ const Contact: React.FC = () => {
                   href={url}
                   target="_blank"
                 >
-                  <Icon className="text-lg" />
-                  <Text className="text-xs">{text}</Text>
+                  <Icon className="text-xl xl:text-2xl" />
+                  <Text className="text-sm">{text}</Text>
                 </Link>
               ))}
             </div>
@@ -45,29 +64,5 @@ const Contact: React.FC = () => {
     </Section>
   );
 };
-
-type Contact = {
-  icon: IconType;
-  text: string;
-  url: string;
-};
-
-const contacts: Contact[] = [
-  {
-    icon: FaDiscord,
-    text: "Zoel#5767",
-    url: "https://discord.com/users/1015875403627364362"
-  },
-  {
-    icon: AiOutlineMail,
-    text: "zulmyazhary32@gmail.com",
-    url: "mailto:zulmyazhary32@gmail.com"
-  },
-  {
-    icon: AiOutlineInstagram,
-    text: "@zulmyazhary_",
-    url: "https://www.instagram.com/zulmyazhary_"
-  }
-];
 
 export default Contact;

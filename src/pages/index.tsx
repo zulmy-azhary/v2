@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <Quote />
         <About />
         <Skills />
-        <Projects />
+        <Projects type="main" hasDetails />
         <Contact />
       </Layout>
     </>

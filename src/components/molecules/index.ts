@@ -4,7 +4,6 @@ export { default as NavList } from "./NavList";
 export { default as Sidebar } from "./Sidebar";
 
 export { default as HeroContent } from "./HeroContent";
-export { default as HeroImage } from "./HeroImage";
 export { default as HeroPicture } from "./HeroPicture";
 export { default as HeroStatus } from "./HeroStatus";
 
