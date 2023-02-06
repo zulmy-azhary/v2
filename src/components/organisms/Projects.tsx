@@ -14,7 +14,7 @@ const Projects: React.FC<Props> = ({ hasLine, hasDetails, headingTitle, type }) 
   return (
     <Section
       section={headingTitle ?? "projects"}
-      headingTitle={headingTitle}
+      headingTitle={headingTitle ? `${headingTitle}-projects` : "projects"}
       hasLine={hasLine}
       hasDetails={hasDetails}
       headingClassName="lg:grow"
@@ -23,14 +23,7 @@ const Projects: React.FC<Props> = ({ hasLine, hasDetails, headingTitle, type }) 
         {allProjects
           .filter((project) => project.type === type)
           .map((project) => (
-            <ProjectCard
-              key={project.id}
-              src={project.src}
-              title={project.title}
-              techList={project.techList}
-              repoUrl={project.repoUrl}
-              liveUrl={project.liveUrl}
-            />
+            <ProjectCard key={project.id} {...project} />
           ))}
       </div>
     </Section>
