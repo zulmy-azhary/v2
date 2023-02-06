@@ -1,4 +1,3 @@
-import { Icons } from ".";
 import { Link } from "@/components/atoms";
 import React from "react";
 import { motion } from "framer-motion";
@@ -11,24 +10,24 @@ interface Props {
 const Sidebar: React.FC<Props> = ({ items, isOpen }) => {
   return (
     <motion.ul
-      className="fixed inset-y-0 right-0 flex w-full flex-col gap-y-10 gap-x-7 bg-bgColor px-7 pt-48 pb-16"
+      className="fixed inset-y-0 right-0 grid w-full place-items-center bg-bgColor py-20"
       variants={ulVariants}
       initial={false}
       animate={isOpen ? "opened" : "closed"}
     >
-      {items.map((item, i) => (
-        <motion.li
-          key={i}
-          variants={liVariants}
-          className={
-            "text-center text-3xl before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#'] md:text-base"
-          }
-        >
-          <Link to={item}>{item}</Link>
-        </motion.li>
-      ))}
-      <motion.div variants={liVariants} className="mt-auto flex justify-center gap-x-4">
-        <Icons />
+      <motion.div className="mx-auto flex h-full w-full max-w-xs flex-col justify-center gap-y-8">
+        {items.map((item, i) => (
+          <motion.li
+            key={i}
+            variants={liVariants}
+            transition={{ type: "tween" }}
+            className={
+              "text-3xl font-light before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
+            }
+          >
+            <Link to={item}>{item}</Link>
+          </motion.li>
+        ))}
       </motion.div>
     </motion.ul>
   );

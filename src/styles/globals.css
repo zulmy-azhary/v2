@@ -14,3 +14,7 @@
   background-clip: padding-box;
   background-color: #abb2bf77;
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #abb2bfaa;
+}
