@@ -128,19 +128,28 @@ const otherProjects: Project[] = [
   },
   {
     id: 8,
-    title: "Realtime Chat App",
-    techList: ["Javascript", "NextJs", "Firebase", "Chakra UI"],
-    repoUrl: "https://github.com/zulmy-azhary/realtime-chat-app",
-    liveUrl: "https://next-chatapp.vercel.app/",
-    type: "others"
-  },
-  {
-    id: 9,
     title: "Loopstudios Landingpage",
     src: "/assets/projects/loopstudios.jpg",
     techList: ["Typescript", "Svelte", "TailwindCSS"],
     repoUrl: "https://github.com/zulmy-azhary/loopstudios",
     liveUrl: "https://zoel-loopstudios.vercel.app/",
+    type: "others"
+  },
+  {
+    id: 9,
+    title: "Gerai Design",
+    src: "/assets/projects/gerai-design.jpg",
+    techList: ["Typescript", "ReactJs", "TailwindCSS"],
+    repoUrl: "https://github.com/zulmy-azhary/gerai-design",
+    liveUrl: "https://gerai-design.vercel.app/",
+    type: "others"
+  },
+  {
+    id: 10,
+    title: "Realtime Chat App",
+    techList: ["Javascript", "NextJs", "Firebase", "Chakra UI"],
+    repoUrl: "https://github.com/zulmy-azhary/realtime-chat-app",
+    liveUrl: "https://next-chatapp.vercel.app/",
     type: "others"
   }
 ];
