@@ -100,7 +100,7 @@ export const TagSphere: React.FC<Props> = (props) => {
     });
   }, [active, depth, firstRender, keepRollingAfterMouseOut, lessSpeed, maxSpeed, mouseX, mouseY, radius, size]);
 
-  const init = () => {
+  const init = useCallback(() => {
     setActive(false);
     const mouseX0 = initialSpeed * Math.sin(initialDirection * (Math.PI / 180));
     const mouseY0 = -initialSpeed * Math.cos(initialDirection * (Math.PI / 180));
@@ -109,7 +109,7 @@ export const TagSphere: React.FC<Props> = (props) => {
     setMouseY(() => mouseY0);
 
     next();
-  };
+  }, [mouseX, mouseY]);
 
   useEffect(() => {
     init();

@@ -22,7 +22,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <ScrollProvider>
           <div className={clsx(firaCode.variable, "overflow-hidden font-firaCode")}>
             <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-              {isLoading ? <Loader setLoading={setLoading} /> : <Component key={url} {...pageProps} />}
+              {isLoading && url !== "/404" ? (
+                <Loader setLoading={setLoading} />
+              ) : (
+                <Component key={url} {...pageProps} />
+              )}
             </AnimatePresence>
           </div>
         </ScrollProvider>

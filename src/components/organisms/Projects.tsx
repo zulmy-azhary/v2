@@ -17,7 +17,7 @@ const Projects: React.FC<Props> = ({ hasLine, hasDetails, headingTitle, type }) 
       headingTitle={headingTitle ? `${headingTitle}-projects` : "projects"}
       hasLine={hasLine}
       hasDetails={hasDetails}
-      headingClassName="lg:grow"
+      headingClassName="lg:!grow"
     >
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 xl:grid-cols-12">
         {allProjects

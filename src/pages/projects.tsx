@@ -7,8 +7,10 @@ const Projects: NextPage = () => {
   return (
     <Layout title="All Projects" metaDescription="This is v2 of my portfolio" className="min-h-[1000px]">
       <div className="flex items-center justify-between">
-        <Heading content={"before:content-['/']"}>projects</Heading>
-        <ButtonLink className="text-gray hover:text-white">{"<~~"} Back</ButtonLink>
+        <Heading className="after:!bg-gray lg:!grow" hasLine content={"before:content-['/']"}>
+          projects
+        </Heading>
+        <ButtonLink variant="secondary">{"<~~"} Back</ButtonLink>
       </div>
       <Text className="mt-3 text-gray">List of my projects</Text>
       <ProjectComponent headingTitle="main" type="main" hasLine={false} />

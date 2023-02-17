@@ -26,10 +26,7 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
           {headingTitle ?? section}
         </Heading>
         {section === "projects" && hasDetails && (
-          <ButtonLink
-            className="self-end border-l-[1px] border-primary hover:text-primary md:self-auto"
-            href="/projects"
-          >
+          <ButtonLink variant="primary" className="self-end md:self-auto" href="/projects">
             View all {"~~>"}
           </ButtonLink>
         )}
