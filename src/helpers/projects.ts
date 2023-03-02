@@ -63,9 +63,23 @@ const mainProjects: Project[] = [
 const unfinishedProjects: Project[] = [
   {
     id: 1,
-    title: "MERN App",
-    techList: ["Typecript", "MongoDB", "ExpressJs", "ReactJs", "NodeJs", "Mongoose", "TailwindCSS", "Nodemon", "Vite"],
+    title: "Tools Leadtime",
+    description: "Leadtime management system web app at PT. Kalla Toyota Urip",
+    techList: [
+      "Typecript",
+      "MongoDB",
+      "ExpressJs",
+      "ReactJs",
+      "NodeJs",
+      "Mongoose",
+      "TailwindCSS",
+      "Nodemon",
+      "Yup",
+      "React Query",
+      "JWT"
+    ],
     repoUrl: "https://github.com/zulmy-azhary/mern-app",
+    liveUrl: "https://kalla-leadtime.vercel.app",
     type: "unfinished"
   }
 ];

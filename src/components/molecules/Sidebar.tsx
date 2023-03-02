@@ -20,7 +20,7 @@ const Sidebar: React.FC<Props> = ({ items, isOpen }) => {
           <motion.li
             key={i}
             variants={liVariants}
-            transition={{ type: "tween" }}
+            transition={{ type: "spring" }}
             className={
               "text-3xl font-light before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
             }

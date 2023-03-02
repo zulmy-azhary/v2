@@ -34,7 +34,6 @@ const Navbar: React.FC = () => {
               <Hamburger />
             </>
           )}
-          {/* // <ButtonLink className="text-gray hover:text-white">{"<~~"} Back</ButtonLink> */}
         </aside>
       </nav>
     </header>

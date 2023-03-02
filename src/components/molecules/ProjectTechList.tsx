@@ -12,7 +12,9 @@ const ProjectTechList: React.FC<Props> = ({ techList }) => {
       border="border-none"
       className={clsx(
         "grid grid-flow-col px-3 py-2 text-gray lg:gap-x-3",
-        techList.length < 5 ? "grid-rows-2" : "grid-rows-3"
+        techList.length > 0 && "grid-rows-2",
+        techList.length > 5 && "grid-rows-3",
+        techList.length > 9 && "grid-rows-4"
       )}
     >
       {techList.map((tech, i) => (
