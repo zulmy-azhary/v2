@@ -1,5 +1,6 @@
 import { Link } from "@/components/atoms";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   items: string[];
@@ -7,7 +8,14 @@ interface Props {
 
 const NavList: React.FC<Props> = ({ items }) => {
   return (
-    <ul className="flex gap-x-7 px-7 pt-48 md:px-0 md:pt-0">
+    <motion.ul
+      variants={variants}
+      initial="exit"
+      animate="enter"
+      exit="exit"
+      transition={{ duration: 0.5 }}
+      className="flex gap-x-7 px-7 pt-48 md:px-0 md:pt-0"
+    >
       {items.map((item, i) => (
         <li
           key={i}
@@ -18,8 +26,13 @@ const NavList: React.FC<Props> = ({ items }) => {
           <Link to={item}>{item}</Link>
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
+};
+
+const variants = {
+  exit: { opacity: 0, x: 200 },
+  enter: { opacity: 1, x: 0 }
 };
 
 export default NavList;
