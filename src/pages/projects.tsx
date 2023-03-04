@@ -5,7 +5,7 @@ import { ButtonLink, Heading, Text } from "@/components/atoms";
 
 const Projects: NextPage = () => {
   return (
-    <Layout title="All Projects" metaDescription="This is v2 of my portfolio" className="min-h-[1000px]">
+    <Layout title="All Projects" metaDescription="Lists of my projects" className="min-h-[1000px]">
       <div className="flex items-center justify-between">
         <Heading className="after:!bg-gray lg:!grow" hasLine content={"before:content-['/']"}>
           projects

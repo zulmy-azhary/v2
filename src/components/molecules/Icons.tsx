@@ -1,3 +1,4 @@
+import { FaDiscord } from "react-icons/fa";
 import { Icon } from "@/components/atoms";
 import type { IconType } from "react-icons";
 import React from "react";
@@ -24,6 +25,10 @@ const items: Item[] = [
   {
     iconName: AiFillLinkedin,
     url: "https://www.linkedin.com/in/zulmy-azhary-7a0b04159"
+  },
+  {
+    iconName: FaDiscord,
+    url: "https://discord.com/users/1015875403627364362"
   }
 ];
 

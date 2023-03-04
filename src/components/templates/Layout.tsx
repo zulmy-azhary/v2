@@ -23,7 +23,7 @@ const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
       document.title = `Zulmy Azhary AS ${steps[step++]} ${title}`;
     };
 
-    const interval = setInterval(handleTitle, 500);
+    const interval = setInterval(handleTitle, 1000);
     return () => clearInterval(interval);
   }, [title]);
 
