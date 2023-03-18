@@ -98,7 +98,7 @@ export const TagSphere: React.FC<Props> = (props) => {
       }
       return items;
     });
-  }, [active, depth, firstRender, keepRollingAfterMouseOut, lessSpeed, maxSpeed, mouseX, mouseY, radius, size]);
+  }, [mouseX, mouseY]);
 
   const init = useCallback(() => {
     setActive(false);
@@ -119,7 +119,7 @@ export const TagSphere: React.FC<Props> = (props) => {
   useEffect(() => {
     const animationFrame = requestAnimationFrame(next);
     return () => cancelAnimationFrame(animationFrame);
-  }, [mouseX, mouseY, lessSpeed, active, items, props.radius, next]);
+  }, [mouseX, mouseY, items]);
 
   return (
     <div
