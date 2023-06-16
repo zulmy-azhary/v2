@@ -10,7 +10,12 @@ const HeroContent: React.FC = () => {
       <Text className="w-full text-justify text-sm tracking-wide text-gray md:text-center md:text-base lg:text-start lg:text-lg xl:w-11/12 2xl:text-2xl">
         Design, building, and maintaining interactive and responsive websites especially for modern websites.
       </Text>
-      <ButtonLink variant="primary" href="#" className="self-end md:self-center lg:self-auto">
+      <ButtonLink
+        variant="primary"
+        href="https://resume.io/r/B7lYHzQFx"
+        target="_blank"
+        className="self-end md:self-center lg:self-auto"
+      >
         Download CV
       </ButtonLink>
     </div>

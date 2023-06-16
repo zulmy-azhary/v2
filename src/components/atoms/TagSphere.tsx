@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { Items, TagSphereProps } from "@/types/tagCloud";
-import { type ReactNode, createRef, useCallback, useEffect, useRef, useState } from "react";
+import React, { type ReactNode, createRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createItem, defaultState, defaultStyles, updateItemPosition } from "@/helpers/tagSphere";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,7 +29,7 @@ export const TagSphere: React.FC<Props> = (props) => {
 
   const depth = 1 * radius;
   const size = 1.5 * radius;
-  const itemHooks = texts.map(() => createRef());
+  const itemHooks = useMemo(() => texts.map(() => createRef<HTMLElement>()), [texts]);
   const [items, setItems] = useState<Items[]>([]);
 
   useEffect(() => {
