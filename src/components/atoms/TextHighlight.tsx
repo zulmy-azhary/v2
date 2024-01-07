@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 type Props = React.HTMLAttributes<HTMLSpanElement>;
 
@@ -8,7 +8,7 @@ const TextHighlight: React.FC<React.PropsWithChildren<Props>> = (props) => {
 
   return (
     <span
-      className={clsx("bg-gradient-to-br bg-clip-text text-transparent", className ?? "from-primary to-accent")}
+      className={cn("bg-gradient-to-br bg-clip-text text-transparent", className ?? "from-primary to-accent")}
       {...rest}
     >
       {children}

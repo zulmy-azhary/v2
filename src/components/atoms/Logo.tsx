@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface Props extends React.SVGAttributes<HTMLOrSVGElement> {
   width?: string;
@@ -15,7 +15,7 @@ const Logo: React.FC<Props> = (props) => {
       height={height || "48"}
       viewBox={`0 0 ${width || "42"} ${height || "48"}`}
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx("stroke-primary stroke-2 transition-colors", className)}
+      className={cn("stroke-primary stroke-2 transition-colors", className)}
       fill="none"
       {...rest}
     >

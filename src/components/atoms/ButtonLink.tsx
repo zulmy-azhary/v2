@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary";
@@ -16,8 +16,8 @@ const Button: React.FC<React.PropsWithChildren<Props>> = (props) => {
   return (
     <Link
       href={(href as string) || "/"}
-      className={clsx(
-        "w-fit bg-opacity-0 py-2 px-5 text-xs transition-colors hover:bg-opacity-20 md:text-sm lg:text-base 2xl:text-xl",
+      className={cn(
+        "flex w-fit items-center bg-opacity-20 py-2 px-5 font-firaCode text-xs transition-colors hover:bg-opacity-30 md:text-sm lg:text-base 2xl:text-xl",
         btnVariant,
         className
       )}

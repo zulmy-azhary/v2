@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
   content?: string;
@@ -11,11 +11,11 @@ const Heading: React.FC<React.PropsWithChildren<Props>> = (props) => {
 
   return (
     <h2
-      className={clsx(
-        "flex grow items-center text-2xl font-medium before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent lg:grow-0 xl:text-3xl",
+      className={cn(
+        "flex grow items-center text-2xl font-medium before:mr-1 before:bg-primary before:bg-clip-text before:text-3xl before:text-transparent lg:grow-0 lg:text-3xl lg:before:text-4xl xl:text-4xl xl:before:text-5xl",
         className ?? "lg:basis-2/4",
         content ?? "before:content-['#']",
-        hasLine && "after:ml-2 after:h-[1px] after:w-full after:bg-primary xl:after:ml-4"
+        hasLine && "after:ml-1 after:h-[1px] after:w-full after:bg-primary"
       )}
       {...rest}
     >
