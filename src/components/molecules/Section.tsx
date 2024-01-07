@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 import { ButtonLink, Heading } from "@/components/atoms";
 
 type SectionType = "about" | "projects" | "skills" | "contacts";
@@ -18,7 +18,7 @@ const Section: React.FC<React.PropsWithChildren<Props>> = (props) => {
   return (
     <section
       id={section}
-      className={clsx("flex min-h-[24rem] flex-col gap-y-10 pt-28 md:gap-y-16 md:pt-32", className)}
+      className={cn("flex min-h-[24rem] flex-col gap-y-10 pt-28 md:gap-y-16 md:pt-32", className)}
       {...rest}
     >
       <div className="flex flex-row justify-between">
