@@ -8,7 +8,7 @@ interface Props {
 const ProjectTitle: React.FC<Props> = ({ title }) => {
   return (
     <Box className="px-3 py-2 md:px-5" border="border-b">
-      <Text fontWeight="font-normal" className="lg:text-lg xl:text-xl">
+      <Text fontWeight="font-bold" className="text-lg xl:text-xl">
         {title}
       </Text>
     </Box>

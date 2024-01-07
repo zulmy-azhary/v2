@@ -21,9 +21,7 @@ const Sidebar: React.FC<Props> = ({ items, isOpen }) => {
             key={i}
             variants={liVariants}
             transition={{ type: "spring" }}
-            className={
-              "text-3xl font-light before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
-            }
+            className="flex items-center text-4xl font-light before:mr-1 before:bg-primary before:bg-clip-text before:text-transparent before:content-['#']"
           >
             <Link to={item}>{item}</Link>
           </motion.li>

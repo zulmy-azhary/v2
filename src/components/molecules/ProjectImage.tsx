@@ -8,21 +8,19 @@ interface Props {
 }
 
 const ProjectImage: React.FC<Props> = ({ src, title }) => {
+  if (!src) return null;
+
   return (
-    <>
-      {src && (
-        <Box className="overflow-hidden" border="border-b">
-          <Image
-            className="aspect-video w-full cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
-            src={src}
-            width={512}
-            height={512}
-            alt={`${title} Image`}
-            priority
-          />
-        </Box>
-      )}
-    </>
+    <Box className="overflow-hidden" border="border-b">
+      <Image
+        className="aspect-video w-full cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
+        src={src}
+        width={512}
+        height={512}
+        alt={`${title} Image`}
+        priority
+      />
+    </Box>
   );
 };
 

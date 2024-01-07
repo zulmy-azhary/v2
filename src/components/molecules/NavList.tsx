@@ -19,9 +19,7 @@ const NavList: React.FC<Props> = ({ items }) => {
       {items.map((item, i) => (
         <li
           key={i}
-          className={
-            "text-base before:bg-gradient-to-br before:from-primary before:to-accent before:bg-clip-text before:text-transparent before:content-['#']"
-          }
+          className="flex items-center text-base before:bg-primary before:bg-clip-text before:text-transparent before:content-['#']"
         >
           <Link to={item}>{item}</Link>
         </li>
