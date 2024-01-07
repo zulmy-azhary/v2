@@ -10,13 +10,13 @@ const Contact: React.FC = () => {
       <div className="flex flex-col items-center justify-between gap-y-10">
         <Image
           src="/assets/contact-bg.svg"
-          width={512}
-          height={512}
+          width={256}
+          height={256}
           alt="Contact Background Image"
           className="w-full basis-2/4 select-none object-contain md:w-11/12 lg:w-10/12 xl:w-9/12"
           priority
         />
-        <Text className="text-center text-sm text-gray lg:text-base xl:w-4/6">
+        <Text className="text-center text-sm text-gray md:text-lg xl:w-4/6 2xl:text-xl">
           I&apos;m interested in freelance or job opportunities. However, if you have other requests or questions,
           don&apos;t hesitate to send me an email.
         </Text>

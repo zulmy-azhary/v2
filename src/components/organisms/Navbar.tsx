@@ -24,13 +24,13 @@ const Navbar: React.FC = () => {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <header key={pathname} className="fixed inset-x-0 top-0 z-10 bg-bgColor pt-5 pb-5 md:pt-7 md:pb-3 xl:pt-10">
+      <header key={pathname} className="fixed inset-x-0 top-0 z-10 bg-bgColor pt-5 pb-5">
         <nav className="mx-auto flex max-w-xs items-center justify-between md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-8xl 3xl:max-w-9xl">
           <BrandLogo />
           {isTablet ? (
             <NavList items={chooseItems} />
           ) : (
-            <aside ref={asideRef}>
+            <aside ref={asideRef as React.MutableRefObject<HTMLElement>}>
               <Sidebar isOpen={isOpen} items={chooseItems} />
               <Hamburger />
             </aside>

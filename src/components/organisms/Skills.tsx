@@ -1,12 +1,12 @@
 import React from "react";
-import { Section, SkillCard, SkillObjects } from "@/components/molecules";
-import { databases, frameworkOrLibraries, languages, others, uiFrameworkOrComponents } from "@/helpers/skills";
+import { Section, SkillCard, SkillSphere } from "@/components/molecules";
+import { databases, frameworkOrLibraries, languages, others, uiFrameworkOrComponents } from "@/data/skills";
 
 const Skills: React.FC = () => {
   return (
     <Section section={"skills"} headingClassName="basis-5/12">
-      <div className="flex flex-col gap-y-6 lg:flex-row lg:gap-x-6">
-        <SkillObjects />
+      <div className="flex flex-col gap-y-6 font-andika lg:flex-row lg:gap-x-6">
+        <SkillSphere />
         <div className="grid basis-3/5 grid-flow-row grid-cols-2 gap-5 md:grid-cols-7 lg:basis-4/6 lg:grid-flow-col lg:grid-cols-1 lg:grid-rows-2 lg:place-items-end xl:basis-3/5">
           <SkillCard
             title="Languages"
