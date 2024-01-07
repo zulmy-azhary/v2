@@ -1,26 +1,29 @@
+import { Box } from "@/components/atoms";
+import Image from "next/image";
 import React from "react";
-import clsx from "clsx";
-import { Box, Text } from "@/components/atoms";
+import type { Tech } from "@/types/index";
+import { cn } from "@/lib/utils";
 
 interface Props {
-  techList: string[];
+  techs: Tech[];
 }
 
-const ProjectTechList: React.FC<Props> = ({ techList }) => {
+const ProjectTechList: React.FC<Props> = ({ techs }) => {
   return (
     <Box
       border="border-none"
-      className={clsx(
-        "grid grid-flow-col px-3 py-2 text-gray lg:gap-x-3",
-        techList.length > 0 && "grid-rows-2",
-        techList.length > 5 && "grid-rows-3",
-        techList.length > 9 && "grid-rows-4"
-      )}
+      className={cn("grid grid-cols-8 place-items-center gap-x-2 gap-y-2 px-3 py-2 lg:gap-x-3")}
     >
-      {techList.map((tech, i) => (
-        <Text itemList className="text-xs md:text-sm" key={i}>
-          {tech}
-        </Text>
+      {techs.map((tech, i) => (
+        <Image
+          key={i}
+          width={32}
+          height={32}
+          src={tech.url}
+          className="h-8 w-8 select-none"
+          alt={tech.name}
+          title={tech.name}
+        />
       ))}
     </Box>
   );
