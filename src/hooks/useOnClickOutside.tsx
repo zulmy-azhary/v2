@@ -1,16 +1,16 @@
 import { useEffect, useRef } from "react";
 
-export const useOnClickOutside = (
+export const useOnClickOutside = <T extends HTMLElement>(
   state: boolean,
   handler: () => void
-): React.MutableRefObject<HTMLElement | undefined> => {
-  const menuRef = useRef<HTMLElement | undefined>(undefined);
+): React.MutableRefObject<T | undefined> => {
+  const menuRef = useRef<T | undefined>(undefined);
 
   useEffect(() => {
     if (!state) return;
     // When user click outside
     const handlerEvent = (e: MouseEvent): void => {
-      if (!menuRef.current?.contains(e.target as HTMLElement) && state) {
+      if (!menuRef.current?.contains(e.target as T) && state) {
         handler();
       }
     };
