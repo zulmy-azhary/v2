@@ -1,4 +1,4 @@
-import { allSkills } from "./skills";
+import { allSkills } from "@/data/skills";
 import type { CSSProperties, MutableRefObject, ReactNode, RefObject } from "react";
 import type { Items, TagSphereProps } from "@/types/tagCloud";
 
@@ -105,7 +105,7 @@ export const createItem = (
 };
 
 export const defaultState: TagSphereProps = {
-  texts: allSkills,
+  texts: allSkills.map((skill) => skill.name),
   maxSpeed: 7,
   initialSpeed: 7,
   initialDirection: 135,
