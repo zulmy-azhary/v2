@@ -3,10 +3,10 @@ import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Loader } from "@/components/molecules";
-import clsx from "clsx";
-import { firaCode } from "@/styles/fonts";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { ScrollProvider, ToggleProvider } from "@/context";
+import { andika, firaCode } from "@/styles/fonts";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const url = router.route;
@@ -20,14 +20,14 @@ export default function App({ Component, pageProps, router }: AppProps) {
       </Head>
       <ToggleProvider>
         <ScrollProvider>
-          <div className={clsx(firaCode.variable, "overflow-hidden font-firaCode")}>
-            <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-              {isLoading && url !== "/404" ? (
-                <Loader setLoading={setLoading} />
-              ) : (
-                <Component key={url} {...pageProps} />
-              )}
-            </AnimatePresence>
+          <div className={cn(firaCode.variable, andika.variable, "overflow-hidden font-andika")}>
+            {url === "/404" ? (
+              <Component key={url} {...pageProps} />
+            ) : (
+              <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+                {isLoading ? <Loader setLoading={setLoading} /> : <Component key={url} {...pageProps} />}
+              </AnimatePresence>
+            )}
           </div>
         </ScrollProvider>
       </ToggleProvider>
