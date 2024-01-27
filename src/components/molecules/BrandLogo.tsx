@@ -1,5 +1,3 @@
-// import { Link } from "react-scroll";
-import React from "react";
 import { Link, Logo } from "@/components/atoms";
 
 const BrandLogo: React.FC = () => {

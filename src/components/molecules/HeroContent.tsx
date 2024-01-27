@@ -1,4 +1,3 @@
-import React from "react";
 import { ButtonLink, Text, TextHighlight } from "@/components/atoms";
 
 const HeroContent: React.FC = () => {
@@ -16,7 +15,7 @@ const HeroContent: React.FC = () => {
       </Text>
       <ButtonLink
         variant="primary"
-        href="/assets/CV.pdf" //https://elegantcv.app/resume/8aa0d00c-44ea-4c1d-8277-75e6bf97dad9/summary
+        href="https://drive.google.com/file/d/1klxtpSJK09Icf_gslcp9WhWskljctfl1/view"
         target="_blank"
         className="self-end px-6 py-3 md:self-center lg:self-auto"
       >

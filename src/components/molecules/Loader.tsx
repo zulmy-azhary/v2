@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { type Transition, motion } from "framer-motion";
 
 interface Props {

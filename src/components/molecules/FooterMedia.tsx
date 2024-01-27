@@ -1,5 +1,4 @@
 import { Icons } from ".";
-import React from "react";
 import { Text } from "@/components/atoms";
 
 const FooterMedia: React.FC = () => {

@@ -1,6 +1,5 @@
 import { Dots } from "@/components/atoms";
 import Image from "next/image";
-import React from "react";
 
 const HeroPicture: React.FC = () => {
   return (

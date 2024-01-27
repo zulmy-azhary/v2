@@ -1,8 +1,5 @@
-import { Box } from "@/components/atoms";
 import Image from "next/image";
-import React from "react";
 import type { Tech } from "@/types/index";
-import { cn } from "@/lib/utils";
 
 interface Props {
   techs: Tech[];
@@ -10,10 +7,7 @@ interface Props {
 
 const ProjectTechList: React.FC<Props> = ({ techs }) => {
   return (
-    <Box
-      border="border-none"
-      className={cn("grid grid-cols-8 place-items-center gap-x-2 gap-y-2 px-3 py-2 lg:gap-x-3")}
-    >
+    <div className="mt-4 flex flex-row place-items-center gap-x-2 gap-y-2 overflow-x-auto p-3 md:p-5 md:pb-0 lg:gap-x-3">
       {techs.map((tech, i) => (
         <Image
           key={i}
@@ -25,7 +19,7 @@ const ProjectTechList: React.FC<Props> = ({ techs }) => {
           title={tech.name}
         />
       ))}
-    </Box>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import type { Items, TagSphereProps } from "@/types/tagCloud";
-import React, { type ReactNode, createRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, createRef, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createItem, defaultState, defaultStyles, updateItemPosition } from "@/helpers/tagSphere";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {

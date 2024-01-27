@@ -1,4 +1,3 @@
-import React from "react";
 import { Dots, Text } from "@/components/atoms";
 
 const contents = [

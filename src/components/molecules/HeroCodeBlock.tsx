@@ -1,6 +1,6 @@
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import theme from "react-syntax-highlighter/dist/cjs/styles/prism/one-dark";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 /*
@@ -10,7 +10,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 */
 
 const code = `function createSystem(): System {
-  return new System();
+  return new CreateSystem();
 };
 
 function gatherFeatures(): Feature[] {

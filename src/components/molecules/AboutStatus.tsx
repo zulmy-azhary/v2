@@ -1,10 +1,9 @@
-import React from "react";
-import { Box, Text } from "@/components/atoms";
+import { Text } from "@/components/atoms";
 
 const HeroStatus: React.FC = () => {
   return (
     <div className="ml-auto w-fit translate-x-3 -translate-y-5 md:ml-0 md:w-full md:translate-x-0 xl:-translate-x-6">
-      <Box className="bg-bgColor px-3 py-2 md:px-5 lg:px-3 xl:px-5">
+      <div className="border border-gray bg-bgColor px-3 py-2 md:px-5 lg:px-3 xl:px-5">
         <Text
           itemList
           fontWeight="font-normal"
@@ -12,7 +11,7 @@ const HeroStatus: React.FC = () => {
         >
           Mistakes are proof that you&apos;re trying.
         </Text>
-      </Box>
+      </div>
       <Text fontWeight="font-normal" className="ml-auto w-fit bg-bgColor py-1 text-xs text-gray md:text-sm">
         Makassar, Indonesia
       </Text>

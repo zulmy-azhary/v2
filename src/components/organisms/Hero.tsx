@@ -1,4 +1,3 @@
-import React from "react";
 import { HeroCodeBlock, HeroContent } from "@/components/molecules";
 
 const Hero: React.FC = () => {

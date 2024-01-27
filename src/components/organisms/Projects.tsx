@@ -1,5 +1,4 @@
 import type { ProjectType } from "@/types";
-import React from "react";
 import { allProjects } from "@/data/projects";
 import { ProjectCard, Section } from "@/components/molecules";
 

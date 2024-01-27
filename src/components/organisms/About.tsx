@@ -1,4 +1,3 @@
-import React from "react";
 import { AboutContent, AboutPicture, AboutStatus, Section } from "@/components/molecules";
 
 const About: React.FC = () => {

@@ -1,5 +1,4 @@
 import { FaHeart } from "react-icons/fa";
-import React from "react";
 import { Text } from "@/components/atoms";
 
 const FooterCopyright: React.FC = () => {

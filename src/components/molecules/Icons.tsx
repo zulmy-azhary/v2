@@ -1,5 +1,4 @@
 import { Icon } from "@/components/atoms";
-import React from "react";
 import { socialMedias } from "@/data/socialMedias";
 
 const Icons: React.FC = () => {

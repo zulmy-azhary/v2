@@ -1,4 +1,3 @@
-import React from "react";
 import { FooterContent, FooterCopyright, FooterMedia } from "@/components/molecules";
 
 const Footer: React.FC = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { Logo, Text } from "@/components/atoms";
 
 const FooterContent: React.FC = () => {

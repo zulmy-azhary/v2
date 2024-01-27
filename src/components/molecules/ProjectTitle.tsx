@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Text } from "@/components/atoms";
+import { Text } from "@/components/atoms";
 
 interface Props {
   title: string;
@@ -7,11 +6,11 @@ interface Props {
 
 const ProjectTitle: React.FC<Props> = ({ title }) => {
   return (
-    <Box className="px-3 py-2 md:px-5" border="border-b">
+    <div className="absolute w-fit -translate-y-1/2 bg-card px-3 py-2 md:px-5">
       <Text fontWeight="font-bold" className="text-lg xl:text-xl">
         {title}
       </Text>
-    </Box>
+    </div>
   );
 };
 

@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { Footer, Navbar } from "@/components/organisms";
 import { type MotionProps, motion } from "framer-motion";
-import React, { useEffect } from "react";
 
 type Props = React.HTMLAttributes<HTMLElement> &
   MotionProps & {

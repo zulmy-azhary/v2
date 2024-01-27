@@ -1,6 +1,5 @@
 import { AiOutlineMail } from "react-icons/ai";
 import Image from "next/image";
-import React from "react";
 import { Section } from "@/components/molecules";
 import { ButtonLink, Text } from "@/components/atoms";
 

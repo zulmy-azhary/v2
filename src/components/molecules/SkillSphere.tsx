@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { TagSphere } from "@/components/atoms";
 import { allSkills as skills } from "@/data/skills";
 import { useMediaQuery } from "@/hooks/useMediaQuery";

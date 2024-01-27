@@ -1,5 +1,4 @@
 import { Icons } from "@/components/molecules";
-import React from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 

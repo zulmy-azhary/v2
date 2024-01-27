@@ -1,10 +1,10 @@
 import { AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useMemo } from "react";
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { useRouter } from "next/router";
 import { useToggle } from "@/context";
 import { BrandLogo, Hamburger, NavList, Sidebar } from "@/components/molecules";
-import React, { useMemo } from "react";
 
 const homePage = ["about", "skills", "projects", "contacts"];
 const projectPage = ["main", "unfinished", "other"];

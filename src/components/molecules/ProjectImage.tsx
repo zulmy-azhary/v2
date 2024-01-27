@@ -1,26 +1,22 @@
-import { Box } from "@/components/atoms";
 import Image from "next/image";
-import React from "react";
 
 interface Props {
-  src?: string;
+  src: React.ComponentProps<"img">["src"];
   title: string;
 }
 
 const ProjectImage: React.FC<Props> = ({ src, title }) => {
-  if (!src) return null;
-
   return (
-    <Box className="overflow-hidden" border="border-b">
+    <div className="overflow-hidden rounded-t">
       <Image
         className="aspect-video w-full cursor-pointer select-none object-cover transition-transform duration-500 hover:scale-[1.125]"
-        src={src}
+        src={src ?? "https://place-hold.it/512x512/fff.png?text=No Preview"}
         width={512}
         height={512}
         alt={`${title} Image`}
         priority
       />
-    </Box>
+    </div>
   );
 };
 

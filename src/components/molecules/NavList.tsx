@@ -1,5 +1,4 @@
 import { Link } from "@/components/atoms";
-import React from "react";
 import { motion } from "framer-motion";
 
 interface Props {

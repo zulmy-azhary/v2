@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 import { Link as ReactScrollLink, type ScrollLinkProps } from "react-scroll";
 
