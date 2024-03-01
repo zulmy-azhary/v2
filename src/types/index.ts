@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
+import type { projectNav } from "@/data/nav";
 
-export type ProjectType = "main" | "unfinished" | "others";
+export type ProjectType = (typeof projectNav)[number];
 
 export type Tech = {
   name: string;
