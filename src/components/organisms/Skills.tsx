@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
     <Section section="skills" headingClassName="basis-5/12">
       <div className="flex flex-col gap-y-6 font-andika lg:flex-row lg:gap-x-6">
         <SkillSphere />
-        <div className="grid basis-3/5 grid-flow-row grid-cols-2 gap-5 md:grid-cols-7 lg:basis-4/6 lg:grid-flow-col lg:grid-cols-1 lg:grid-rows-2 lg:place-items-end xl:basis-3/5">
+        <div className="grid basis-3/5 grid-flow-row grid-cols-2 gap-5 md:grid-cols-7 lg:basis-3/5 lg:grid-flow-col lg:grid-cols-1 lg:grid-rows-2 lg:place-items-end xl:basis-7/12">
           <SkillCard
             title="Languages"
             skills={languages}
@@ -25,12 +25,12 @@ const Skills: React.FC = () => {
           <SkillCard
             title="Databases"
             skills={databases}
-            className="md:col-span-2 md:col-start-6 lg:col-auto lg:col-start-3 lg:row-start-2 lg:self-start lg:justify-self-start xl:col-start-2 xl:row-start-2 xl:justify-self-end"
+            className="lg:order-frst md:col-span-2 md:col-start-6 lg:col-auto lg:col-start-1 xl:col-start-2 xl:row-start-2 xl:self-start xl:justify-self-end"
           />
           <SkillCard
             title="Others"
             skills={others}
-            className="col-start-2 row-span-2 row-start-2 self-end md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-1 md:self-center lg:order-first lg:col-auto lg:row-auto lg:self-end xl:col-start-2 xl:row-start-1"
+            className="col-start-2 row-span-2 row-start-2 self-end md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-1 md:self-center lg:col-auto lg:col-start-3 lg:row-auto lg:self-start lg:justify-self-start xl:col-auto xl:col-start-2 xl:row-start-1 xl:self-end"
           />
         </div>
       </div>
