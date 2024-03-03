@@ -1,5 +1,4 @@
 import {
-  bootstrap,
   chakraUI,
   express,
   figma,
@@ -10,21 +9,25 @@ import {
   mongoDB,
   next,
   node,
+  postgreSQL,
+  prisma,
   react,
+  remix,
+  shadCN,
   solid,
   styledComponents,
   svelte,
   tailwindCSS,
   typescript,
   vite,
-  vsCode,
-  vue
+  vue,
+  zod
 } from "@/data/icons";
 
 export const languages = [javascript, typescript];
-export const uiFrameworkOrComponents = [tailwindCSS, styledComponents, chakraUI, materialUI, bootstrap];
-export const frameworkOrLibraries = [react, next, vue, svelte, solid, node, express];
-export const databases = [firebase, mongoDB];
-export const others = [figma, vsCode, framerMotion, vite];
+export const uiFrameworkOrComponents = [tailwindCSS, styledComponents, chakraUI, materialUI, shadCN];
+export const frameworkOrLibraries = [react, next, remix, vue, svelte, solid, node, express];
+export const databases = [postgreSQL, firebase, mongoDB];
+export const others = [prisma, figma, framerMotion, vite, zod];
 
 export const allSkills = [...languages, ...uiFrameworkOrComponents, ...frameworkOrLibraries, ...databases, ...others];
