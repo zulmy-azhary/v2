@@ -5,9 +5,7 @@ import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 import { useRouter } from "next/router";
 import { useToggle } from "@/context";
 import { BrandLogo, Hamburger, NavList, Sidebar } from "@/components/molecules";
-
-const homePage = ["about", "skills", "projects", "contacts"];
-const projectPage = ["main", "unfinished", "other"];
+import { homeNav, projectNav } from "@/data/nav";
 
 const Navbar: React.FC = () => {
   const { pathname } = useRouter();
@@ -17,9 +15,9 @@ const Navbar: React.FC = () => {
 
   const chooseItems = useMemo(() => {
     if (pathname === "/projects") {
-      return projectPage;
+      return projectNav;
     }
-    return homePage;
+    return homeNav;
   }, [pathname]);
 
   return (

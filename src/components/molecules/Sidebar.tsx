@@ -1,12 +1,12 @@
 import { Link } from "@/components/atoms";
 import { motion } from "framer-motion";
 
-interface Props {
-  items: string[];
+interface Props<T> {
+  items: readonly T[];
   isOpen: boolean;
 }
 
-const Sidebar: React.FC<Props> = ({ items, isOpen }) => {
+const Sidebar = <T extends string>({ items, isOpen }: Props<T>) => {
   return (
     <motion.ul
       className="fixed inset-y-0 right-0 grid w-full place-items-center bg-bgColor py-20"

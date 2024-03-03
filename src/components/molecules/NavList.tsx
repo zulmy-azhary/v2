@@ -1,11 +1,11 @@
 import { Link } from "@/components/atoms";
 import { motion } from "framer-motion";
 
-interface Props {
-  items: string[];
+interface Props<T> {
+  items: readonly T[];
 }
 
-const NavList: React.FC<Props> = ({ items }) => {
+const NavList = <T extends string>({ items }: Props<T>) => {
   return (
     <motion.ul
       variants={variants}
