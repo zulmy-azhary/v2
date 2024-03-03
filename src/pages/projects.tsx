@@ -14,8 +14,8 @@ const Projects: NextPage = () => {
       </div>
       <Text className="mt-3 text-gray">List of my projects</Text>
       <ProjectComponent headingTitle="main" type="main" hasLine={false} />
-      <ProjectComponent headingTitle="unfinished" type="unfinished" hasLine={false} />
-      <ProjectComponent headingTitle="other" type="others" hasLine={false} />
+      <ProjectComponent headingTitle="boilerplate" type="boilerplate" hasLine={false} />
+      <ProjectComponent headingTitle="other" type="other" hasLine={false} />
     </Layout>
   );
 };
