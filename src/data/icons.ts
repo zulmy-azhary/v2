@@ -1,10 +1,5 @@
 import type { Tech } from "@/types";
 
-export const bootstrap: Tech = {
-  name: "Bootstrap",
-  url: "/assets/icons/bootstrap.svg"
-};
-
 export const chakraUI: Tech = {
   name: "Chakra UI",
   url: "/assets/icons/chakra-ui.svg"
@@ -60,6 +55,11 @@ export const next: Tech = {
   url: "/assets/icons/next.svg"
 };
 
+export const nextAuth: Tech = {
+  name: "Next Auth",
+  url: "/assets/icons/next-auth.svg"
+};
+
 export const node: Tech = {
   name: "Node",
   url: "/assets/icons/node.svg"
@@ -68,6 +68,16 @@ export const node: Tech = {
 export const nodemon: Tech = {
   name: "Nodemon",
   url: "/assets/icons/nodemon.svg"
+};
+
+export const prisma: Tech = {
+  name: "Prisma",
+  url: "/assets/icons/prisma.svg"
+};
+
+export const postgreSQL: Tech = {
+  name: "PostgreSQL",
+  url: "/assets/icons/postgresql.svg"
 };
 
 export const react: Tech = {
@@ -88,6 +98,16 @@ export const reactRouterDOM: Tech = {
 export const reactQuery: Tech = {
   name: "React Query",
   url: "/assets/icons/react-query.svg"
+};
+
+export const remix: Tech = {
+  name: "Remix",
+  url: "/assets/icons/remix.svg"
+};
+
+export const shadCN: Tech = {
+  name: "ShadCN UI",
+  url: "/assets/icons/shadcn-ui.svg"
 };
 
 export const solid: Tech = {
@@ -120,11 +140,6 @@ export const vite: Tech = {
   url: "/assets/icons/vite.svg"
 };
 
-export const vsCode: Tech = {
-  name: "VsCode",
-  url: "/assets/icons/vscode.svg"
-};
-
 export const vue: Tech = {
   name: "Vue",
   url: "/assets/icons/vue.svg"
@@ -133,4 +148,8 @@ export const vue: Tech = {
 export const vuelidate: Tech = {
   name: "Vuelidate",
   url: "/assets/icons/vuelidate.svg"
+};
+export const zod: Tech = {
+  name: "Zod",
+  url: "/assets/icons/zod.svg"
 };
